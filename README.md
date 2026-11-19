@@ -1,6 +1,6 @@
 # violetumleditor.github.io
 
-Website of **Violet UML Editor**: product page and user guide, in English and French.
+Website of **Violet**, the free diagram editor: product page and user guide, in English and French.
 
 Live at <https://violetumleditor.github.io> — the online editor itself is at <https://violetumleditor.github.io/product> (served from the [product](https://github.com/violetumleditor/product) repository).
 

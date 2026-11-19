@@ -4,21 +4,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Install on your desktop — Violet documentation</title>
-<meta name="description" content="Windows, Linux, any Java system and Eclipse.">
+<meta name="description" content="Windows, macOS and Linux.">
 <link rel="canonical" href="https://violetumleditor.github.io/docs/install.html">
 <link rel="alternate" hreflang="en" href="https://violetumleditor.github.io/docs/install.html">
 <link rel="alternate" hreflang="fr" href="https://violetumleditor.github.io/fr/docs/install.html">
 <link rel="alternate" hreflang="x-default" href="https://violetumleditor.github.io/docs/install.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Install on your desktop — Violet documentation">
-<meta property="og:description" content="Windows, Linux, any Java system and Eclipse.">
+<meta property="og:description" content="Windows, macOS and Linux.">
 <meta property="og:url" content="https://violetumleditor.github.io/docs/install.html">
 <meta property="og:image" content="https://violetumleditor.github.io/assets/img/og-image.png">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#6C4EBE">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
-<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Roboto:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
@@ -34,9 +35,8 @@
 <header style="position: relative; z-index: 5; border-bottom: 1px solid #ECE8F4; background: #FBFAFD">
 <nav aria-label="Main" style="max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 72px; display: flex; align-items: center; gap: 32px">
 <a href="/" style="display: flex; align-items: center; gap: 10px; color: #1A1530; flex-shrink: 0">
-<img src="/assets/img/logo.png" alt="" style="width: 34px; height: 34px; border-radius: 9px">
+<svg aria-hidden="true" width="34" height="34" viewBox="0 0 24 24" style="flex-shrink: 0; display: block"><rect width="24" height="24" rx="5.6" fill="#6C4EBE"/><g fill="#FFFFFF" transform="translate(12 12.3) scale(.6)"><path transform="rotate(-84)" d="M2.2 0C5.050 -3.410 9.690 -4.185 11.4 0C9.690 4.185 5.050 3.410 2.2 0Z"/><path transform="rotate(-8)" d="M2.2 0C5.000 -3.080 9.520 -3.780 11.2 0C9.520 3.780 5.000 3.080 2.2 0Z"/><path transform="rotate(58)" d="M2.2 0C4.450 -2.970 7.650 -3.645 9.0 0C7.650 3.645 4.450 2.970 2.2 0Z"/><path transform="rotate(124)" d="M2.2 0C4.450 -2.970 7.650 -3.645 9.0 0C7.650 3.645 4.450 2.970 2.2 0Z"/><path transform="rotate(188)" d="M2.2 0C5.000 -3.080 9.520 -3.780 11.2 0C9.520 3.780 5.000 3.080 2.2 0Z"/></g></svg>
 <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.02em">Violet</span>
-<span class="wm2" style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 20px; color: #6B6680; letter-spacing: -0.02em">UML Editor</span>
 </a>
 <div class="nl" style="display: flex; align-items: center; gap: 26px; font-size: 15px; font-weight: 500; flex-grow: 1">
 <a class="navlink" href="/#diagrams">Diagrams</a>
@@ -94,15 +94,14 @@ Download</a>
 <article class="article">
 <p class="crumb"><a href="/docs/">Documentation</a> <span aria-hidden="true">/</span> Getting started</p>
 <h1>Install on your desktop</h1>
-<p class="lead">Windows, Linux, any Java system and Eclipse.</p>
+<p class="lead">Windows, macOS and Linux.</p>
 
 <p>All desktop packages are published on <a href="https://sourceforge.net/projects/violet/">SourceForge</a>.</p>
 <table><thead><tr><th>System</th><th>Package</th></tr></thead><tbody>
 <tr><td>Windows</td><td>Installer <code>.exe</code></td></tr>
-<tr><td>Debian, Ubuntu…</td><td><code>.deb</code> package</td></tr>
-<tr><td>Fedora, openSUSE…</td><td><code>.rpm</code> package</td></tr>
-<tr><td>Any system with Java 17+</td><td>Runnable <code>.jar</code> file</td></tr>
-<tr><td>Eclipse IDE</td><td>Eclipse plugin</td></tr>
+<tr><td>macOS</td><td>Application for macOS</td></tr>
+<tr><td>Linux (Debian, Ubuntu…)</td><td><code>.deb</code> package</td></tr>
+<tr><td>Any other system with Java 17+</td><td>Runnable <code>.jar</code> file</td></tr>
 </tbody></table>
 <h2 id="jar">Running the JAR file</h2>
 <p>Install a Java runtime, version 17 or later, then double-click the file or run:</p>
@@ -126,15 +125,15 @@ mvn clean package</code></pre>
 <div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px 40px; display: flex; flex-direction: column; gap: 48px">
 <div style="display: flex; flex-wrap: wrap; gap: 48px">
 <div style="flex: 2 1 280px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; align-items: center; gap: 10px"><img src="/assets/img/logo.png" alt="" style="width: 30px; height: 30px; border-radius: 8px"><span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 19px; color: #FFFFFF">Violet UML Editor</span></div>
-<p style="margin: 0; font-size: 14.5px; line-height: 1.6; max-width: 320px">A free, open-source and lightweight UML editor, for students, teachers and developers.</p>
+<div style="display: flex; align-items: center; gap: 10px"><svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" style="flex-shrink: 0; display: block"><rect width="24" height="24" rx="5.6" fill="#6C4EBE"/><g fill="#FFFFFF" transform="translate(12 12.3) scale(.6)"><path transform="rotate(-84)" d="M2.2 0C5.050 -3.410 9.690 -4.185 11.4 0C9.690 4.185 5.050 3.410 2.2 0Z"/><path transform="rotate(-8)" d="M2.2 0C5.000 -3.080 9.520 -3.780 11.2 0C9.520 3.780 5.000 3.080 2.2 0Z"/><path transform="rotate(58)" d="M2.2 0C4.450 -2.970 7.650 -3.645 9.0 0C7.650 3.645 4.450 2.970 2.2 0Z"/><path transform="rotate(124)" d="M2.2 0C4.450 -2.970 7.650 -3.645 9.0 0C7.650 3.645 4.450 2.970 2.2 0Z"/><path transform="rotate(188)" d="M2.2 0C5.000 -3.080 9.520 -3.780 11.2 0C9.520 3.780 5.000 3.080 2.2 0Z"/></g></svg><span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 19px; color: #FFFFFF">Violet</span></div>
+<p style="margin: 0; font-size: 14.5px; line-height: 1.6; max-width: 320px">A free, open-source and lightweight diagram editor, for students, teachers and developers.</p>
 </div>
 <nav aria-label="Product" style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 10px; font-size: 14.5px"><strong style="color: #FFFFFF; font-size: 13px; letter-spacing: .08em">PRODUCT</strong><a href="/#diagrams" style="color: #BEB8D3">Diagrams</a><a href="/#features" style="color: #BEB8D3">Features</a><a href="/#download" style="color: #BEB8D3">Download</a><a href="https://violetumleditor.github.io/product" style="color: #BEB8D3">Launch online</a></nav>
 <nav aria-label="Documentation" style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 10px; font-size: 14.5px"><strong style="color: #FFFFFF; font-size: 13px; letter-spacing: .08em">DOCUMENTATION</strong><a href="/docs/" style="color: #BEB8D3">User guide</a><a href="/docs/" style="color: #BEB8D3">Getting started</a><a href="/docs/" style="color: #BEB8D3">Files &amp; storage</a><a href="https://github.com/violetumleditor/product#how-to-compile-violets-source-code" style="color: #BEB8D3">Developer guide</a></nav>
 <nav aria-label="Community" style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 10px; font-size: 14.5px"><strong style="color: #FFFFFF; font-size: 13px; letter-spacing: .08em">COMMUNITY</strong><a href="https://github.com/violetumleditor/product" style="color: #BEB8D3">GitHub — source code</a><a href="https://github.com/violetumleditor/violetumleditor.github.io" style="color: #BEB8D3">GitHub — website</a><a href="https://sourceforge.net/projects/violet/" style="color: #BEB8D3">SourceForge</a><a href="http://alexdp.free.fr/violet" style="color: #BEB8D3">Historical website</a></nav>
 </div>
 <div style="border-top: 1px solid #2B2545; padding-top: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13.5px; color: #8F86B0">
-<span>© Violet UML Editor contributors · Released under the GNU GPL</span>
+<span>© Violet contributors · Released under the GNU GPL</span>
 <span>Hosted on GitHub Pages</span>
 </div>
 </div>
