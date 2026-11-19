@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Violet UML Editor — éditeur UML libre et léger</title>
+<meta name="description" content="Violet est un éditeur UML libre, gratuit et léger : diagrammes de classes, de séquence, d’activité, d’états, d’objets et de cas d’utilisation, sur ordinateur ou dans le navigateur.">
+<link rel="canonical" href="https://violetumleditor.github.io/fr/">
+<link rel="alternate" hreflang="en" href="https://violetumleditor.github.io/">
+<link rel="alternate" hreflang="fr" href="https://violetumleditor.github.io/fr/">
+<link rel="alternate" hreflang="x-default" href="https://violetumleditor.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Violet UML Editor — éditeur UML libre et léger">
+<meta property="og:description" content="Violet est un éditeur UML libre, gratuit et léger : diagrammes de classes, de séquence, d’activité, d’états, d’objets et de cas d’utilisation, sur ordinateur ou dans le navigateur.">
+<meta property="og:url" content="https://violetumleditor.github.io/fr/">
+<meta property="og:image" content="https://violetumleditor.github.io/assets/img/og-image.png">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#6C4EBE">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Roboto:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7451706255072226" crossorigin="anonymous"></script>
+<script defer src="/assets/js/site.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<div class="page">
+<!-- ============ NAV ============ -->
+<header style="position: relative; z-index: 5; border-bottom: 1px solid #ECE8F4; background: #FBFAFD">
+<nav aria-label="Navigation principale" style="max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 72px; display: flex; align-items: center; gap: 32px">
+<a href="/fr/" style="display: flex; align-items: center; gap: 10px; color: #1A1530; flex-shrink: 0">
+<img src="/assets/img/logo.png" alt="" style="width: 34px; height: 34px; border-radius: 9px">
+<span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.02em">Violet</span>
+<span class="wm2" style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 20px; color: #6B6680; letter-spacing: -0.02em">UML Editor</span>
+</a>
+<div class="nl" style="display: flex; align-items: center; gap: 26px; font-size: 15px; font-weight: 500; flex-grow: 1">
+<a class="navlink" href="#diagrams">Diagrammes</a>
+<a class="navlink" href="#features">Fonctionnalités</a>
+<a class="navlink" href="/fr/docs/">Documentation</a>
+<a class="navlink" href="https://github.com/violetumleditor/product" style="display: flex; align-items: center; gap: 6px">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+GitHub</a>
+</div>
+<span class="sp" style="flex-grow: 1; display: none"></span>
+<div style="display: flex; align-items: center; gap: 10px">
+<div role="group" aria-label="Langue" style="display: flex; padding: 3px; border-radius: 10px; background: #EFEBF8">
+<a href="/" hreflang="en" lang="en" style="height: 32px; min-width: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 7px; font: 600 13px Inter, sans-serif; background: transparent; color: #5B5671; box-shadow: none">EN</a><a href="#" hreflang="fr" lang="fr" aria-current="true" style="height: 32px; min-width: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 7px; font: 600 13px Inter, sans-serif; background: #FFFFFF; color: #1A1530; box-shadow: 0 1px 2px rgba(40,20,90,.18)">FR</a>
+</div>
+<a class="cta2" href="https://violetumleditor.github.io/product" style="height: 44px; padding: 0 16px; display: inline-flex; align-items: center; border-radius: 10px; border: 1px solid #D9D3EA; color: #1A1530; font-weight: 600; font-size: 15px; background: #FFFFFF; white-space: nowrap">Lancer en ligne</a>
+<a class="cta1" href="https://sourceforge.net/projects/violet/" style="height: 44px; padding: 0 16px; display: inline-flex; align-items: center; gap: 8px; border-radius: 10px; background: #1A1530; color: #FFFFFF; font-weight: 600; font-size: 15px; white-space: nowrap">
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+Télécharger</a>
+<button type="button" class="burger" id="burger" aria-controls="mmenu" aria-expanded="false" aria-label="Ouvrir le menu" style="display: none; width: 44px; height: 44px; border: 1px solid #D9D3EA; border-radius: 10px; background: #FFFFFF; align-items: center; justify-content: center; cursor: pointer; color: #1A1530">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+</button>
+</div>
+</nav>
+<div id="mmenu" hidden class="mmenu" style="position: absolute; left: 0; right: 0; top: 72px; background: #FFFFFF; border-bottom: 1px solid #ECE8F4; box-shadow: 0 24px 40px -24px rgba(40,20,90,.3); padding: 12px 24px 24px; display: flex; flex-direction: column; gap: 4px; font-size: 17px; font-weight: 500">
+<a class="navlink" href="#diagrams" style="padding: 12px 0; border-bottom: 1px solid #F0EDF6">Diagrammes</a>
+<a class="navlink" href="#features" style="padding: 12px 0; border-bottom: 1px solid #F0EDF6">Fonctionnalités</a>
+<a class="navlink" href="/fr/docs/" style="padding: 12px 0; border-bottom: 1px solid #F0EDF6">Documentation</a>
+<a class="navlink" href="https://github.com/violetumleditor/product" style="padding: 12px 0; border-bottom: 1px solid #F0EDF6">GitHub — code source</a>
+<a class="navlink" href="https://github.com/violetumleditor/violetumleditor.github.io" style="padding: 12px 0; border-bottom: 1px solid #F0EDF6">GitHub — site web</a>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 14px">
+<a href="https://violetumleditor.github.io/product" style="height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 10px; border: 1px solid #D9D3EA; color: #1A1530; font-weight: 600; font-size: 15px">Lancer en ligne</a>
+<a href="https://sourceforge.net/projects/violet/" style="height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 10px; background: #1A1530; color: #FFFFFF; font-weight: 600; font-size: 15px">Télécharger</a>
+</div>
+</div>
+</header>
+
+<!-- ============ AD BAND (option A, recommended) ============ -->
+<aside class="adband" aria-label="Publicité" style="background: #F6F3FC; border-bottom: 1px solid #ECE8F4">
+<div style="max-width: 1200px; margin: 0 auto; padding: 12px 24px 14px; display: flex; flex-direction: column; align-items: center; gap: 6px">
+<div style="width: 100%; max-width: 728px; display: flex; justify-content: space-between; gap: 12px; font-size: 11px; color: #6B6680">
+<span style="font-weight: 600; letter-spacing: .12em">PUBLICITÉ</span>
+<span class="adnote">La publicité aide Violet à rester libre et gratuit.</span>
+</div>
+<div class="adw"><ins class="adsbygoogle vads" style="display:inline-block" data-ad-client="ca-pub-7451706255072226" data-ad-slot="3093485580"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+</div>
+</aside>
+
+<!-- ============ HERO ============ -->
+<main id="main">
+<section id="top" class="dots" style="border-bottom: 1px solid #ECE8F4">
+<div class="hero" style="max-width: 1200px; margin: 0 auto; padding: 80px 24px 88px; display: flex; flex-direction: column; align-items: center; gap: 56px">
+<div style="max-width: 840px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 26px">
+<span style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px 6px 8px; border-radius: 999px; background: #FFFFFF; border: 1px solid #E3DCF5; font-size: 13px; font-weight: 600; color: #4C1D95; text-align: left">
+<span style="flex-shrink: 0; padding: 2px 8px; border-radius: 999px; background: #6C4EBE; color: #FFFFFF; font-size: 11px; letter-spacing: .04em">NOUVEAU</span>
+Violet 2.3 — une toute nouvelle interface, aussi dans votre navigateur</span>
+<h1 class="h1" style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 68px; line-height: 1.02; letter-spacing: -0.035em; color: #1A1530">Vos diagrammes UML,<br>dessinés en <span style="color: #6C4EBE">quelques secondes.</span></h1>
+<p class="lead" style="margin: 0; font-size: 19px; line-height: 1.6; color: #4A4560; max-width: 640px">Violet est un éditeur UML libre, gratuit et léger. Choisissez un élément dans la palette, posez-le sur la zone de dessin, reliez-le aux autres. C’est tout — sur votre ordinateur ou dans votre navigateur.</p>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px">
+<a href="https://violetumleditor.github.io/product" style="height: 54px; padding: 0 26px; display: inline-flex; align-items: center; gap: 10px; border-radius: 12px; background: #6C4EBE; color: #FFFFFF; font-weight: 600; font-size: 16px; box-shadow: 0 10px 24px -10px rgba(108,78,190,.75)">
+Lancer dans le navigateur
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+<a href="https://sourceforge.net/projects/violet/" style="height: 54px; padding: 0 24px; display: inline-flex; align-items: center; gap: 10px; border-radius: 12px; background: #FFFFFF; border: 1px solid #D9D3EA; color: #1A1530; font-weight: 600; font-size: 16px">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+Télécharger pour ordinateur</a>
+</div>
+<p style="margin: 0; font-size: 14px; color: #5B5671; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 18px">
+<span>Sans inscription</span><span aria-hidden="true">·</span><span>Windows, Linux et tout système Java 17+</span><span aria-hidden="true">·</span><span>English, Français, Deutsch</span></p>
+</div>
+<!-- ===== Violet 2.3 window replica — 3 scenes ===== -->
+<div id="vwin" role="img" aria-label="Fenêtre animée de Violet 2.3 : un diagramme de classes, puis de séquence, puis d’activité se dessinent pas à pas" style="position: relative; width: 100%; max-width: 1136px; height: 760px">
+<div id="vwinInner" style="position: absolute; left: 0; top: 0; width: 1136px; height: 760px; transform: scale(1); transform-origin: 0 0; border-radius: 12px; overflow: hidden; background: #F3F2F7; box-shadow: 0 50px 100px -40px rgba(40,20,90,.45), 0 0 0 1px rgba(60,40,120,.12); font-family: Inter, system-ui, sans-serif; color: #000000; text-align: left">
+
+<!-- top bar -->
+<div style="position: absolute; left: 0; top: 0; right: 0; height: 27px; background: #6C4EBE; color: #FFFFFF; display: flex; align-items: center; font-size: 13px; font-weight: 600">
+<span class="hx sc1" style="position: absolute; left: 0; right: 0; top: 6px; text-align: center">shop.class.violet.html</span>
+<span class="hx sc2" style="position: absolute; left: 0; right: 0; top: 6px; text-align: center">login.seq.violet.html</span>
+<span class="hx sc3" style="position: absolute; left: 0; right: 0; top: 6px; text-align: center">orders.activity.violet.html</span>
+<svg aria-hidden="true" width="20" height="16" viewBox="0 0 20 16" style="position: relative; margin: 0 8px; flex-shrink: 0" fill="#FFFFFF"><ellipse cx="10" cy="4" rx="2.6" ry="3.6"/><ellipse cx="4.2" cy="7.2" rx="3.6" ry="2.4" transform="rotate(-15 4.2 7.2)"/><ellipse cx="15.8" cy="7.2" rx="3.6" ry="2.4" transform="rotate(15 15.8 7.2)"/><ellipse cx="6.4" cy="12.6" rx="2.4" ry="3.2" transform="rotate(30 6.4 12.6)"/><ellipse cx="13.6" cy="12.6" rx="2.4" ry="3.2" transform="rotate(-30 13.6 12.6)"/></svg>
+<span style="position: relative; padding: 0 8px">File</span><span style="position: relative; padding: 0 8px">Edit</span><span style="position: relative; padding: 0 8px">View</span><span style="position: relative; padding: 0 8px">Document</span><span style="position: relative; padding: 0 8px">Help</span>
+<span style="flex-grow: 1"></span>
+<div style="position: relative; display: flex; align-items: center; height: 27px">
+<svg aria-hidden="true" width="60" height="16" viewBox="0 0 60 16" fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 10px"><path d="M10 6.5H18a3.5 3.5 0 0 1 0 7h-3M10 6.5l3-3M10 6.5l3 3"/><path d="M50 6.5H42a3.5 3.5 0 0 0 0 7h3M50 6.5l-3-3M50 6.5l-3 3"/></svg>
+<span style="width: 1px; height: 27px; background: #9F8BD4"></span>
+<svg aria-hidden="true" width="120" height="16" viewBox="0 0 120 16" fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 6px"><circle cx="16" cy="12" r="2.2"/><circle cx="16" cy="4" r="2.2"/><path d="M18 5.2 26 13M18 10.8 26 3"/><rect x="44" y="5" width="8.5" height="9" rx="1.5"/><path d="M41 11V3.5A1.5 1.5 0 0 1 42.5 2H49"/><rect x="71" y="3" width="10" height="12" rx="1.5"/><rect x="73.5" y="1.5" width="5" height="3" rx="1" fill="#6C4EBE"/><path d="M98 4h12M102 4V2.5h4V4M100 4l.8 10h6.4L108 4M103 7v4.5M105 7v4.5"/></svg>
+<span style="width: 1px; height: 27px; background: #9F8BD4"></span>
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" style="margin-left: 16px"><circle cx="7" cy="7" r="5"/><path d="M11 11l3.5 3.5M4.8 7h4.4"/></svg>
+<span style="font-size: 14px; font-weight: 500; padding: 0 9px">100%</span>
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" style="margin-right: 10px"><circle cx="7" cy="7" r="5"/><path d="M11 11l3.5 3.5M4.8 7h4.4M7 4.8v4.4"/></svg>
+<span style="width: 1px; height: 27px; background: #9F8BD4"></span>
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#FFFFFF" stroke-width="1.3" stroke-linecap="round" style="margin: 0 6px 0 10px"><circle cx="8" cy="8" r="3"/><path d="M8 1.5v1.5M8 13v1.5M1.5 8H3M13 8h1.5M3.4 3.4l1 1M11.6 11.6l1 1M3.4 12.6l1-1M11.6 4.4l1-1"/></svg>
+<span style="width: 30px; height: 16px; border-radius: 8px; background: #9A84D8; position: relative"><span style="position: absolute; left: 3px; top: 3px; width: 10px; height: 10px; border-radius: 50%; background: #FFFFFF"></span></span>
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#B6A6E4" stroke-width="1.3" stroke-linecap="round" style="margin: 0 10px 0 6px"><path d="M12.5 10A5.5 5.5 0 0 1 6 3.5 5.5 5.5 0 1 0 12.5 10z"/></svg>
+<span style="width: 1px; height: 27px; background: #9F8BD4"></span>
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" style="margin: 0 12px"><path d="M2 5.5V2h3.5M10.5 2H14v3.5M14 10.5V14h-3.5M5.5 14H2v-3.5"/></svg>
+</div>
+</div>
+
+<!-- left panel -->
+<div style="position: absolute; left: 0; top: 27px; width: 280px; bottom: 0; background: #F3F2F7">
+<div style="position: absolute; left: 10px; top: 10px; width: 258px; height: 22px; box-sizing: border-box; border: 1px solid #C2C2C2; background: #FFFFFF; font-size: 14px; line-height: 20px; color: #A8A8A8; padding-left: 6px">Search a tool</div>
+
+<!-- Common tools card -->
+<div style="position: absolute; left: 10px; top: 44px; width: 258px; height: 174px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E9E9E9; border-radius: 8px">
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#6C4EBE" stroke-width="1.3" stroke-linejoin="round" style="position: absolute; left: 14px; top: 10px"><path d="M3.5 1.5h6l3 3v10h-9z"/><path d="M9.5 1.5v3h3M5.5 8h5M5.5 10.5h5"/></svg>
+<span style="position: absolute; left: 39px; top: 9px; font-size: 12.5px; font-weight: 700">Common tools</span>
+<svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#000000" stroke-width="1.4" stroke-linecap="round" style="position: absolute; right: 14px; top: 12px"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg>
+<span style="position: absolute; left: 15px; top: 38px; font-size: 11px; color: #6E6E6E">Elements</span><span style="position: absolute; left: 72px; right: 14px; top: 46px; height: 1px; background: #D2D2D2"></span>
+<span class="hx pSel" style="position: absolute; left: 7px; top: 57px; width: 47px; height: 40px; border-radius: 6px; background: #E2DBF7"></span>
+<div style="position: absolute; left: 7px; top: 57px; width: 245px; height: 40px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); font-size: 11px; color: #424242; text-align: center">
+<span style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding-top: 7px"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14"><path d="M4 2v9l2.3-2.2L8 12.3l1.3-.6-1.6-3.4H10.8z" fill="#6C4EBE"/></svg>Select</span>
+<span style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding-top: 7px"><svg aria-hidden="true" width="18" height="14" viewBox="0 0 18 14"><path d="M1 3h12l3 3v6H1z" fill="#FEE3C6" stroke="#F1B47A"/></svg>Note</span>
+<span style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding-top: 7px"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14"><path d="M2 2.5h10V5M7 2.5v10M5 12.5h4" fill="none" stroke="#5A5A5A" stroke-width="1.8"/></svg>Text</span>
+<span style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding-top: 7px"><svg aria-hidden="true" width="16" height="14" viewBox="0 0 16 14"><rect x="1.5" y="1" width="13" height="12" fill="#EEE8FC" stroke="#6C4EBE" stroke-width="1.4"/><path d="M3 11l3.5-4 2.5 2.5 1.5-1.5L13 11z" fill="#6C4EBE"/><circle cx="10.5" cy="4.5" r="1.3" fill="#6C4EBE"/></svg>Image</span>
+<span style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding-top: 7px"><svg aria-hidden="true" width="16" height="14" viewBox="0 0 16 14"><rect x="1.5" y="1" width="13" height="12" rx="2" fill="#F3EFFC" stroke="#6C4EBE" stroke-dasharray="2 1.5"/><rect x="4.5" y="3.5" width="4.5" height="4" fill="none" stroke="#6C4EBE"/><rect x="7" y="6" width="4.5" height="4" fill="#fff" stroke="#6C4EBE"/></svg>Area</span>
+</div>
+<span style="position: absolute; left: 15px; top: 106px; font-size: 11px; color: #6E6E6E">Links</span><span style="position: absolute; left: 52px; right: 14px; top: 114px; height: 1px; background: #D2D2D2"></span>
+<div style="position: absolute; left: 7px; top: 128px; width: 245px; height: 40px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); font-size: 11px; color: #424242; text-align: center">
+<span style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding-top: 4px"><svg aria-hidden="true" width="24" height="14" viewBox="0 0 24 14" fill="none" stroke="#000"><path d="M2 7h20"/></svg>Line</span>
+<span style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding-top: 4px"><svg aria-hidden="true" width="24" height="14" viewBox="0 0 24 14" fill="none" stroke="#000"><path d="M2 7h20M17 4l5 3-5 3"/></svg>Arrow</span>
+<span style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding-top: 4px"><svg aria-hidden="true" width="24" height="14" viewBox="0 0 24 14" fill="none" stroke="#000"><path d="M2 7h20M17 4l5 3-5 3M7 4 2 7l5 3"/></svg>Double</span>
+<span style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding-top: 4px"><svg aria-hidden="true" width="24" height="14" viewBox="0 0 24 14" fill="none" stroke="#000" stroke-dasharray="2 2"><path d="M2 7h20"/></svg>Dotted</span>
+<span style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding-top: 4px"><svg aria-hidden="true" width="24" height="14" viewBox="0 0 24 14" fill="none" stroke="#000"><path d="M3 2h9v10h9M17 9l4 3-4 3"/></svg>Bent</span>
+</div>
+</div>
+
+<!-- Scene 1 card: Class diagram -->
+<div class="hx sc1" style="position: absolute; left: 10px; top: 230px; width: 258px; height: 248px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E9E9E9; border-radius: 8px">
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#6C4EBE" stroke-width="1.3" stroke-linejoin="round" style="position: absolute; left: 14px; top: 10px"><path d="M8 1.5 14.5 5 8 8.5 1.5 5z"/><path d="M1.5 8 8 11.5 14.5 8M1.5 11 8 14.5 14.5 11"/></svg>
+<span style="position: absolute; left: 39px; top: 9px; font-size: 12.5px; font-weight: 700">Class diagram</span>
+<svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#000000" stroke-width="1.4" stroke-linecap="round" style="position: absolute; right: 14px; top: 12px"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg>
+<span style="position: absolute; left: 15px; top: 38px; font-size: 11px; color: #6E6E6E">Elements</span><span style="position: absolute; left: 72px; right: 14px; top: 46px; height: 1px; background: #D2D2D2"></span>
+<span class="hx pCls" style="position: absolute; left: 7px; top: 57px; width: 80px; height: 40px; border-radius: 6px; background: #E2DBF7"></span>
+<div style="position: absolute; left: 7px; top: 57px; width: 245px; height: 40px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); font-size: 11px; color: #424242; text-align: center">
+<span style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding-top: 7px"><svg aria-hidden="true" width="18" height="14" viewBox="0 0 18 14"><rect x="1" y="3" width="16" height="9" fill="#fff" stroke="#9A9A9A"/></svg>Class</span>
+<span style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding-top: 7px"><svg aria-hidden="true" width="18" height="14" viewBox="0 0 18 14"><rect x="1" y="3" width="16" height="9" fill="#fff" stroke="#9A9A9A"/><path d="M4 7.5h10" stroke="#B0B0B0" stroke-dasharray="1.5 1"/></svg>Interface</span>
+<span style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding-top: 7px"><svg aria-hidden="true" width="18" height="16" viewBox="0 0 18 16"><path d="M1 3h7v2h9v10H1z" fill="#fff" stroke="#9A9A9A"/></svg>Package</span>
+</div>
+<span style="position: absolute; left: 15px; top: 106px; font-size: 11px; color: #6E6E6E">UML relationships</span><span style="position: absolute; left: 120px; right: 14px; top: 114px; height: 1px; background: #D2D2D2"></span>
+<span class="hx pDe" style="position: absolute; left: 7px; top: 124px; width: 80px; height: 52px; border-radius: 6px; background: #E2DBF7"></span>
+<span class="hx pAs" style="position: absolute; left: 7px; top: 183px; width: 80px; height: 52px; border-radius: 6px; background: #E2DBF7"></span>
+<span class="hx pCo" style="position: absolute; left: 171px; top: 183px; width: 80px; height: 52px; border-radius: 6px; background: #E2DBF7"></span>
+<div style="position: absolute; left: 7px; top: 128px; width: 245px; height: 110px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-rows: 59px; font-size: 11px; line-height: 14px; color: #000000; text-align: center">
+<span style="display: flex; flex-direction: column; align-items: center; gap: 4px"><svg aria-hidden="true" width="24" height="10" viewBox="0 0 24 10" fill="none" stroke="#000"><path d="M2 5h20" stroke-dasharray="2 2"/><path d="M17 2l5 3-5 3"/></svg>Depends on</span>
+<span style="display: flex; flex-direction: column; align-items: center; gap: 4px"><svg aria-hidden="true" width="24" height="10" viewBox="0 0 24 10" fill="none" stroke="#000"><path d="M2 5h15"/><path d="M17 2l5 3-5 3z" fill="#fff"/></svg>Inherits from</span>
+<span style="display: flex; flex-direction: column; align-items: center; gap: 4px"><svg aria-hidden="true" width="24" height="10" viewBox="0 0 24 10" fill="none" stroke="#000"><path d="M2 5h15" stroke-dasharray="2 2"/><path d="M17 2l5 3-5 3z" fill="#fff"/></svg>Implements<br>interface</span>
+<span style="display: flex; flex-direction: column; align-items: center; gap: 4px"><svg aria-hidden="true" width="24" height="10" viewBox="0 0 24 10" fill="none" stroke="#000"><path d="M2 5h20M17 2l5 3-5 3"/></svg>Is associated<br>with</span>
+<span style="display: flex; flex-direction: column; align-items: center; gap: 4px"><svg aria-hidden="true" width="24" height="10" viewBox="0 0 24 10" fill="none" stroke="#000"><path d="M2 5h12"/><path d="M14 5l4-3 4 3-4 3z" fill="#fff"/></svg>Is an<br>aggregate of</span>
+<span style="display: flex; flex-direction: column; align-items: center; gap: 4px"><svg aria-hidden="true" width="24" height="10" viewBox="0 0 24 10" fill="none" stroke="#000"><path d="M2 5h12"/><path d="M14 5l4-3 4 3-4 3z" fill="#000"/></svg>Is composed<br>of</span>
+</div>
+</div>
+
+<!-- Scene 2 card: Sequence diagram -->
+<div class="hx sc2" style="position: absolute; left: 10px; top: 230px; width: 258px; height: 188px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E9E9E9; border-radius: 8px">
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#6C4EBE" stroke-width="1.3" stroke-linejoin="round" style="position: absolute; left: 14px; top: 10px"><path d="M8 1.5 14.5 5 8 8.5 1.5 5z"/><path d="M1.5 8 8 11.5 14.5 8M1.5 11 8 14.5 14.5 11"/></svg>
+<span style="position: absolute; left: 39px; top: 9px; font-size: 12.5px; font-weight: 700">Sequence diagram</span>
+<svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#000000" stroke-width="1.4" stroke-linecap="round" style="position: absolute; right: 14px; top: 12px"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg>
+<span style="position: absolute; left: 15px; top: 38px; font-size: 11px; color: #6E6E6E">Elements</span><span style="position: absolute; left: 72px; right: 14px; top: 46px; height: 1px; background: #D2D2D2"></span>
+<span class="hx pUL" style="position: absolute; left: 7px; top: 57px; width: 80px; height: 40px; border-radius: 6px; background: #E2DBF7"></span>
+<span class="hx pOL" style="position: absolute; left: 89px; top: 57px; width: 80px; height: 40px; border-radius: 6px; background: #E2DBF7"></span>
+<span class="hx pAB" style="position: absolute; left: 171px; top: 57px; width: 80px; height: 40px; border-radius: 6px; background: #E2DBF7"></span>
+<div style="position: absolute; left: 7px; top: 57px; width: 245px; height: 40px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); font-size: 11px; color: #000000; text-align: center">
+<span style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding-top: 6px"><svg aria-hidden="true" width="12" height="14" viewBox="0 0 12 14" fill="none" stroke="#9A9A9A"><circle cx="6" cy="3" r="2"/><path d="M6 5v4M3 7h6M6 9l-2.5 3M6 9l2.5 3"/></svg>User lifeline</span>
+<span style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding-top: 6px"><svg aria-hidden="true" width="18" height="14" viewBox="0 0 18 14"><rect x="2" y="3" width="14" height="9" fill="#fff" stroke="#9A9A9A"/></svg>Object lifeline</span>
+<span style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding-top: 6px"><svg aria-hidden="true" width="12" height="16" viewBox="0 0 12 16"><rect x="3" y="0.5" width="7" height="15" fill="#fff" stroke="#9A9A9A"/></svg>Activation bar</span>
+</div>
+<span style="position: absolute; left: 15px; top: 106px; font-size: 11px; color: #6E6E6E">UML relationships</span><span style="position: absolute; left: 120px; right: 14px; top: 114px; height: 1px; background: #D2D2D2"></span>
+<span class="hx pCall" style="position: absolute; left: 7px; top: 124px; width: 80px; height: 52px; border-radius: 6px; background: #E2DBF7"></span>
+<span class="hx pRet" style="position: absolute; left: 89px; top: 124px; width: 80px; height: 52px; border-radius: 6px; background: #E2DBF7"></span>
+<div style="position: absolute; left: 7px; top: 128px; width: 245px; height: 50px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); font-size: 11px; line-height: 14px; color: #000000; text-align: center">
+<span style="display: flex; flex-direction: column; align-items: center; gap: 4px"><svg aria-hidden="true" width="24" height="10" viewBox="0 0 24 10"><path d="M2 5h15" stroke="#000"/><path d="M16 2l6 3-6 3z" fill="#000"/></svg>Call / Create<br>message</span>
+<span style="display: flex; flex-direction: column; align-items: center; gap: 4px"><svg aria-hidden="true" width="24" height="10" viewBox="0 0 24 10" fill="none" stroke="#000"><path d="M3 5h19" stroke-dasharray="2 2"/><path d="M7 2 2 5l5 3"/></svg>Return<br>message</span>
+</div>
+</div>
+
+<!-- Scene 3 card: Activity diagram -->
+<div class="hx sc3" style="position: absolute; left: 10px; top: 230px; width: 258px; height: 280px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E9E9E9; border-radius: 8px">
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#6C4EBE" stroke-width="1.3" stroke-linejoin="round" style="position: absolute; left: 14px; top: 10px"><path d="M8 1.5 14.5 5 8 8.5 1.5 5z"/><path d="M1.5 8 8 11.5 14.5 8M1.5 11 8 14.5 14.5 11"/></svg>
+<span style="position: absolute; left: 39px; top: 9px; font-size: 12.5px; font-weight: 700">Activity diagram</span>
+<svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#000000" stroke-width="1.4" stroke-linecap="round" style="position: absolute; right: 14px; top: 12px"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg>
+<span style="position: absolute; left: 15px; top: 38px; font-size: 11px; color: #6E6E6E">Elements</span><span style="position: absolute; left: 72px; right: 14px; top: 46px; height: 1px; background: #D2D2D2"></span>
+<span class="hx pStart" style="position: absolute; left: 7px; top: 57px; width: 80px; height: 40px; border-radius: 6px; background: #E2DBF7"></span>
+<span class="hx pAct" style="position: absolute; left: 89px; top: 57px; width: 80px; height: 40px; border-radius: 6px; background: #E2DBF7"></span>
+<span class="hx pDec" style="position: absolute; left: 171px; top: 57px; width: 80px; height: 40px; border-radius: 6px; background: #E2DBF7"></span>
+<span class="hx pEnd" style="position: absolute; left: 89px; top: 163px; width: 80px; height: 40px; border-radius: 6px; background: #E2DBF7"></span>
+<div style="position: absolute; left: 7px; top: 57px; width: 245px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: 43px 63px 40px; font-size: 11px; line-height: 14px; color: #000000; text-align: center">
+<span style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding-top: 6px"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="#5B5B5B"/></svg>Scenario start</span>
+<span style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding-top: 7px"><svg aria-hidden="true" width="18" height="14" viewBox="0 0 18 14"><rect x="1.5" y="1.5" width="15" height="11" rx="2" fill="#fff" stroke="#9A9A9A"/></svg>Activity</span>
+<span style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding-top: 7px"><svg aria-hidden="true" width="18" height="14" viewBox="0 0 18 14"><path d="M9 2l7 5-7 5-7-5z" fill="#fff" stroke="#9A9A9A"/></svg>Decision</span>
+<span style="display: flex; flex-direction: column; align-items: center; gap: 2px; padding-top: 4px"><svg aria-hidden="true" width="18" height="10" viewBox="0 0 18 10"><path d="M2 5h14" stroke="#C8C8C8"/></svg>Horizontal<br>synchronization<br>bar</span>
+<span style="display: flex; flex-direction: column; align-items: center; gap: 2px; padding-top: 4px"><svg aria-hidden="true" width="18" height="10" viewBox="0 0 18 10"><path d="M9 0v10" stroke="#C8C8C8"/></svg>Vertical<br>synchronization<br>bar</span>
+<span style="display: flex; flex-direction: column; align-items: center; gap: 2px; padding-top: 4px"><svg aria-hidden="true" width="18" height="10" viewBox="0 0 18 10"><path d="M2 1h10l4 4-4 4H2z" fill="#fff" stroke="#9A9A9A"/></svg>Signal<br>sending</span>
+<span style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding-top: 6px"><svg aria-hidden="true" width="18" height="12" viewBox="0 0 18 12"><path d="M2 2h14v8H2l4-4z" fill="#fff" stroke="#9A9A9A"/></svg>Signal receipt</span>
+<span style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding-top: 5px"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5" fill="#fff" stroke="#5B5B5B"/><circle cx="8" cy="8" r="4" fill="#5B5B5B"/></svg>Scenario end</span>
+</div>
+<span style="position: absolute; left: 15px; top: 214px; font-size: 11px; color: #6E6E6E">UML relationships</span><span style="position: absolute; left: 120px; right: 14px; top: 222px; height: 1px; background: #D2D2D2"></span>
+<span class="hx pTr" style="position: absolute; left: 7px; top: 232px; width: 80px; height: 40px; border-radius: 6px; background: #E2DBF7"></span>
+<span style="position: absolute; left: 7px; top: 236px; width: 80px; display: flex; flex-direction: column; align-items: center; gap: 3px; font-size: 11px; color: #000"><svg aria-hidden="true" width="24" height="10" viewBox="0 0 24 10" fill="none" stroke="#000"><path d="M2 5h20M17 2l5 3-5 3"/></svg>Transition</span>
+</div>
+
+<!-- Style card -->
+<div style="position: absolute; left: 10px; top: 520px; width: 258px; height: 203px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E9E9E9; border-radius: 8px">
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#6C4EBE" stroke-width="1.3" style="position: absolute; left: 14px; top: 10px"><path d="M8 1.5a6.5 6.5 0 0 0 0 13c1 0 1.4-.8 1-1.6-.5-1 .2-2 1.3-2H12a2.5 2.5 0 0 0 2.5-2.5C14.5 4.4 11.6 1.5 8 1.5z"/><circle cx="5" cy="7" r=".9" fill="#6C4EBE"/><circle cx="7.5" cy="4.5" r=".9" fill="#6C4EBE"/><circle cx="10.5" cy="5.5" r=".9" fill="#6C4EBE"/></svg>
+<span style="position: absolute; left: 39px; top: 9px; font-size: 12.5px; font-weight: 700">Style</span>
+<svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#000000" stroke-width="1.4" stroke-linecap="round" style="position: absolute; right: 14px; top: 12px"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg>
+<span style="position: absolute; left: 17px; top: 35px; font-size: 11px; color: #424242">Colors</span>
+<div style="position: absolute; left: 18px; top: 60px; width: 230px; display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); grid-auto-rows: 30px">
+<span style="width: 18px; height: 18px; box-sizing: border-box; background: #FFFFFF; border: 2px solid #6C4EBE; border-radius: 3px"></span>
+<span style="width: 18px; height: 18px; box-sizing: border-box; background: #F2F2F2; border: 1px solid #C7C7C7; border-radius: 3px"></span>
+<span style="width: 18px; height: 18px; box-sizing: border-box; background: #FBC7B7; border: 1px solid #C7C7C7; border-radius: 3px"></span>
+<span style="width: 18px; height: 18px; box-sizing: border-box; background: #FCD4BE; border: 1px solid #C7C7C7; border-radius: 3px"></span>
+<span style="width: 18px; height: 18px; box-sizing: border-box; background: #FEE3C6; border: 1px solid #C7C7C7; border-radius: 3px"></span>
+<span style="width: 18px; height: 18px; box-sizing: border-box; background: #FFFCD4; border: 1px solid #C7C7C7; border-radius: 3px"></span>
+<span style="width: 18px; height: 18px; box-sizing: border-box; background: #E0EECB; border: 1px solid #C7C7C7; border-radius: 3px"></span>
+<span style="width: 18px; height: 18px; box-sizing: border-box; background: #CCE7C9; border: 1px solid #C7C7C7; border-radius: 3px"></span>
+<span style="width: 18px; height: 18px; box-sizing: border-box; background: #B3DFC4; border: 1px solid #C7C7C7; border-radius: 3px"></span>
+<span style="width: 18px; height: 18px; box-sizing: border-box; background: #BEE6E4; border: 1px solid #C7C7C7; border-radius: 3px"></span>
+<span style="width: 18px; height: 18px; box-sizing: border-box; background: #C1EBFB; border: 1px solid #C7C7C7; border-radius: 3px"></span>
+<span style="width: 18px; height: 18px; box-sizing: border-box; background: #C4D6ED; border: 1px solid #C7C7C7; border-radius: 3px; position: relative"><span class="hx kSb" style="position: absolute; inset: -2px; border: 2px solid #6C4EBE; border-radius: 3px"></span></span>
+<span style="width: 18px; height: 18px; box-sizing: border-box; background: #C4CBE6; border: 1px solid #C7C7C7; border-radius: 3px"></span>
+<span style="width: 18px; height: 18px; box-sizing: border-box; background: #C3BFDE; border: 1px solid #C7C7C7; border-radius: 3px; position: relative"><span class="hx kSl" style="position: absolute; inset: -2px; border: 2px solid #6C4EBE; border-radius: 3px"></span></span>
+<span style="width: 18px; height: 18px; box-sizing: border-box; background: #D0C4DF; border: 1px solid #C7C7C7; border-radius: 3px"></span>
+<span style="width: 18px; height: 18px; box-sizing: border-box; background: #DFC8E0; border: 1px solid #C7C7C7; border-radius: 3px"></span>
+<span style="width: 18px; height: 18px; box-sizing: border-box; background: #FAD0E3; border: 1px solid #C7C7C7; border-radius: 3px"></span>
+<span style="width: 18px; height: 18px; box-sizing: border-box; background: #FBCFD2; border: 1px solid #C7C7C7; border-radius: 3px"></span>
+<span style="width: 18px; height: 18px; box-sizing: border-box; background: #C9C9C9; border: 1px solid #C7C7C7; border-radius: 3px"></span>
+</div>
+<span style="position: absolute; left: 17px; top: 155px; font-size: 11px; color: #424242">Thickness</span>
+<span style="position: absolute; right: 17px; top: 155px; font-size: 11px; color: #424242">1 px</span>
+<span style="position: absolute; left: 28px; right: 26px; top: 180px; height: 2px; background: #C4C4C4"></span>
+<span style="position: absolute; left: 22px; top: 175px; width: 12px; height: 12px; border-radius: 50%; background: #6C4EBE"></span>
+</div>
+</div>
+
+<!-- collapse tab -->
+<div style="position: absolute; left: 280px; top: 360px; width: 16px; height: 52px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #DDDDDD; border-left: 0; border-radius: 0 6px 6px 0; display: flex; align-items: center; justify-content: center; z-index: 2"><svg aria-hidden="true" width="8" height="10" viewBox="0 0 8 10" fill="none" stroke="#6C4EBE" stroke-width="1.3" stroke-linecap="round"><path d="M5.5 1.5 2 5l3.5 3.5"/></svg></div>
+
+<!-- canvas -->
+<div class="vgrid" style="position: absolute; left: 280px; top: 27px; right: 0; bottom: 0; overflow: hidden; font-family: Roboto, Inter, sans-serif">
+
+<!-- ===== Scene 1: class diagram ===== -->
+<div class="hx sc1" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0">
+<svg aria-hidden="true" width="900" height="720" viewBox="0 0 900 720" style="position: absolute; left: 0; top: 0">
+<path class="dk hx kD1" pathLength="100" d="M240 130 H559" fill="none" stroke="#000" stroke-width="1"/>
+<polyline class="hx kD1h" points="551,125.5 559,130 551,134.5" fill="none" stroke="#000" stroke-width="1"/>
+<path class="dk hx kD2" pathLength="100" d="M610 390 V190" fill="none" stroke="#000" stroke-width="1"/>
+<polygon class="hx kD2h" points="610,170.5 605,180 610,189.5 615,180" fill="#000"/>
+<path class="dk hx kD3" pathLength="100" d="M560 425 H241" fill="none" stroke="#000" stroke-width="1"/>
+<path class="hx kD3h" d="M560 425 H241" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="4 3"/>
+<polyline class="hx kD3h" points="249,420.5 241,425 249,429.5" fill="none" stroke="#000" stroke-width="1"/>
+</svg>
+<div class="hx kC" style="position: absolute; left: 140px; top: 90px; width: 100px; height: 80px; box-sizing: border-box; border: 1px solid #BFBFBF; background: #FFFFFF; color: #5C5C5C">
+<span class="hx kFC" style="position: absolute; left: -1px; top: -1px; right: -1px; bottom: -1px; background: #BCCDE2; border: 1px solid #8FA8CB"></span>
+<div style="position: relative; height: 22px; border-bottom: 1px solid #BFBFBF; font-size: 16px; line-height: 21px; text-align: center"><span class="hx kCt">Customer</span></div>
+<div style="position: relative; height: 34px; border-bottom: 1px solid #BFBFBF; font-size: 12px; line-height: 16px; padding-top: 1px"><span class="hx kCt" style="display: block">-name : String<br>-email : String</span></div>
+<div style="position: relative; font-size: 12px; line-height: 16px; padding-top: 1px"><span class="hx kCt">+placeOrder()</span></div>
+</div>
+<div class="hx kCs" style="position: absolute; left: 140px; top: 90px; width: 100px; height: 60px">
+<span style="position: absolute; left: -2px; top: -2px; width: 5px; height: 5px; background: #B366B3"></span><span style="position: absolute; right: -2px; top: -2px; width: 5px; height: 5px; background: #B366B3"></span><span style="position: absolute; left: -2px; bottom: -2px; width: 5px; height: 5px; background: #B366B3"></span><span style="position: absolute; right: -2px; bottom: -2px; width: 5px; height: 5px; background: #B366B3"></span>
+<span style="position: absolute; left: 103px; top: -36px; width: 32px; height: 32px; border-radius: 50%; background: #7B4FD6; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"><path d="M9.5 2 12 4.5 5 11.5H2.5V9z"/></svg></span>
+<span style="position: absolute; left: 103px; top: 4px; width: 32px; height: 32px; border-radius: 50%; background: #7B4FD6; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"><path d="M3 11 11 3M5 3h6v6"/></svg></span>
+</div>
+<div class="hx kO" style="position: absolute; left: 560px; top: 90px; width: 100px; height: 80px; box-sizing: border-box; border: 1px solid #BFBFBF; background: #FFFFFF; color: #5C5C5C">
+<span class="hx kFO" style="position: absolute; left: -1px; top: -1px; right: -1px; bottom: -1px; background: #C3BFDE; border: 1px solid #9790C6"></span>
+<div style="position: relative; height: 22px; border-bottom: 1px solid #BFBFBF; font-size: 16px; line-height: 21px; text-align: center"><span class="hx kOt">Order</span></div>
+<div style="position: relative; height: 34px; border-bottom: 1px solid #BFBFBF; font-size: 12px; line-height: 16px; padding-top: 1px"><span class="hx kOt" style="display: block">-date : Date<br>-status : Status</span></div>
+<div style="position: relative; font-size: 12px; line-height: 16px; padding-top: 1px"><span class="hx kOt">+total() : double</span></div>
+</div>
+<div class="hx kOs" style="position: absolute; left: 560px; top: 90px; width: 100px; height: 60px">
+<span style="position: absolute; left: -2px; top: -2px; width: 5px; height: 5px; background: #B366B3"></span><span style="position: absolute; right: -2px; top: -2px; width: 5px; height: 5px; background: #B366B3"></span><span style="position: absolute; left: -2px; bottom: -2px; width: 5px; height: 5px; background: #B366B3"></span><span style="position: absolute; right: -2px; bottom: -2px; width: 5px; height: 5px; background: #B366B3"></span>
+<span style="position: absolute; left: 103px; top: -36px; width: 32px; height: 32px; border-radius: 50%; background: #7B4FD6; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"><path d="M9.5 2 12 4.5 5 11.5H2.5V9z"/></svg></span>
+<span style="position: absolute; left: 103px; top: 4px; width: 32px; height: 32px; border-radius: 50%; background: #7B4FD6; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"><path d="M3 11 11 3M5 3h6v6"/></svg></span>
+</div>
+<div class="hx kL" style="position: absolute; left: 560px; top: 390px; width: 100px; height: 70px; box-sizing: border-box; border: 1px solid #BFBFBF; background: #FFFFFF; color: #5C5C5C">
+<div style="height: 22px; border-bottom: 1px solid #BFBFBF; font-size: 16px; line-height: 21px; text-align: center">OrderLine</div>
+<div style="height: 18px; border-bottom: 1px solid #BFBFBF; font-size: 12px; line-height: 16px; padding-top: 1px">-quantity : int</div>
+<div style="font-size: 12px; line-height: 16px; padding-top: 1px">+subtotal()</div>
+</div>
+<div class="hx kP" style="position: absolute; left: 140px; top: 390px; width: 100px; height: 70px; box-sizing: border-box; border: 1px solid #BFBFBF; background: #FFFFFF; color: #5C5C5C">
+<div style="height: 22px; border-bottom: 1px solid #BFBFBF; font-size: 16px; line-height: 21px; text-align: center">Product</div>
+<div style="height: 18px; border-bottom: 1px solid #BFBFBF; font-size: 12px; line-height: 16px; padding-top: 1px">-price : double</div>
+<div style="font-size: 12px; line-height: 16px; padding-top: 1px">+getName()</div>
+</div>
+</div>
+
+<!-- ===== Scene 2: sequence diagram ===== -->
+<div class="hx sc2 sc2x" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0">
+<svg aria-hidden="true" width="900" height="720" viewBox="0 0 900 720" style="position: absolute; left: 0; top: 0" font-family="Roboto, Inter, sans-serif" font-size="12">
+<g class="hx sU" fill="none" stroke="#BFBFBF" stroke-width="1"><circle cx="140" cy="13" r="8"/><path d="M140 21v21M125 28h30M140 42l-12 13M140 42l12 13"/><path d="M140 62V340" stroke-dasharray="4 4"/></g>
+<g class="hx sS"><rect x="340.5" y="0.5" width="79" height="60" fill="#fff" stroke="#BFBFBF"/><text x="380" y="35" text-anchor="middle" fill="#858585" text-decoration="underline">:Server</text><path d="M380 61V340" stroke="#BFBFBF" stroke-dasharray="4 4"/></g>
+<g class="hx sD"><rect x="580.5" y="0.5" width="79" height="60" fill="#fff" stroke="#BFBFBF"/><text x="620" y="35" text-anchor="middle" fill="#858585" text-decoration="underline">:Database</text><path d="M620 61V340" stroke="#BFBFBF" stroke-dasharray="4 4"/></g>
+<rect class="hx sBU" x="130.5" y="100.5" width="19" height="200" fill="#fff" stroke="#BFBFBF"/>
+<rect class="hx sBS" x="370.5" y="120.5" width="19" height="150" fill="#fff" stroke="#BFBFBF"/>
+<rect class="hx sBD" x="610.5" y="150.5" width="19" height="50" fill="#fff" stroke="#BFBFBF"/>
+<path class="dk hx sM1" pathLength="100" d="M150 120.5 H361" fill="none" stroke="#000"/>
+<polygon class="hx sM1h" points="360,115.5 370,120.5 360,125.5" fill="#000"/>
+<text class="hx sM1l" x="260" y="113" text-anchor="middle" fill="#555">login()</text>
+<path class="dk hx sM2" pathLength="100" d="M390 150.5 H601" fill="none" stroke="#000"/>
+<polygon class="hx sM2h" points="600,145.5 610,150.5 600,155.5" fill="#000"/>
+<text class="hx sM2l" x="500" y="143" text-anchor="middle" fill="#555">findUser()</text>
+<path class="dk hx sR1" pathLength="100" d="M610 200.5 H391" fill="none" stroke="#000"/>
+<path class="hx sR1h" d="M610 200.5 H391" fill="none" stroke="#000" stroke-dasharray="4 3"/>
+<polyline class="hx sR1h" points="398,196 390,200.5 398,205" fill="none" stroke="#000"/>
+<text class="hx sR1l" x="500" y="193" text-anchor="middle" fill="#555">user</text>
+<path class="dk hx sR2" pathLength="100" d="M370 250.5 H151" fill="none" stroke="#000"/>
+<path class="hx sR2h" d="M370 250.5 H151" fill="none" stroke="#000" stroke-dasharray="4 3"/>
+<polyline class="hx sR2h" points="158,246 150,250.5 158,255" fill="none" stroke="#000"/>
+<text class="hx sR2l" x="260" y="243" text-anchor="middle" fill="#555">ok</text>
+</svg>
+</div>
+
+<!-- ===== Scene 3: activity diagram ===== -->
+<div class="hx sc3 sc3x" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0">
+<svg aria-hidden="true" width="900" height="720" viewBox="0 0 900 720" style="position: absolute; left: 0; top: 0" font-family="Roboto, Inter, sans-serif" font-size="12">
+<path class="dk hx t1" pathLength="100" d="M380 50 V98" fill="none" stroke="#000"/>
+<polyline class="hx t1h" points="375.5,91 380,99 384.5,91" fill="none" stroke="#000"/>
+<path class="dk hx t2" pathLength="100" d="M380 160 V208" fill="none" stroke="#000"/>
+<polyline class="hx t2h" points="375.5,201 380,209 384.5,201" fill="none" stroke="#000"/>
+<path class="dk hx t3" pathLength="100" d="M340 230.5 H240.5 V288" fill="none" stroke="#000"/>
+<polyline class="hx t3h" points="236,281 240.5,289 245,281" fill="none" stroke="#000"/>
+<text class="hx t3l" x="290" y="223" text-anchor="middle" fill="#555" font-size="11">[refused]</text>
+<path class="dk hx t4" pathLength="100" d="M420 230.5 H520.5 V288" fill="none" stroke="#000"/>
+<polyline class="hx t4h" points="516,281 520.5,289 525,281" fill="none" stroke="#000"/>
+<text class="hx t4l" x="470" y="223" text-anchor="middle" fill="#555" font-size="11">[paid]</text>
+<path class="dk hx t5" pathLength="100" d="M240.5 350 V430.5 H368" fill="none" stroke="#000"/>
+<polyline class="hx t5h" points="361,426 369,430.5 361,435" fill="none" stroke="#000"/>
+<path class="dk hx t6" pathLength="100" d="M520.5 350 V430.5 H392" fill="none" stroke="#000"/>
+<polyline class="hx t6h" points="399,426 391,430.5 399,435" fill="none" stroke="#000"/>
+<circle class="hx aS" cx="380" cy="40" r="10" fill="#5B5B5B"/>
+<g class="hx aR"><rect x="340.5" y="100.5" width="79" height="59" rx="8" fill="#fff" stroke="#BFBFBF"/><text class="hx aRt" x="380" y="134" text-anchor="middle" fill="#6B6B6B">Receive order</text></g>
+<g class="hx aRs"><rect x="338" y="98" width="5" height="5" fill="#B366B3"/><rect x="417" y="98" width="5" height="5" fill="#B366B3"/><rect x="338" y="157" width="5" height="5" fill="#B366B3"/><rect x="417" y="157" width="5" height="5" fill="#B366B3"/><circle cx="455" cy="80" r="16" fill="#7B4FD6"/><path d="M457.5 73 460 75.5 453 82.5H450.5V80z" fill="none" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"/><circle cx="455" cy="120" r="16" fill="#7B4FD6"/><path d="M451 124 459 116M453 116h6v6" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></g>
+<polygon class="hx aD" points="380,210.5 420,230.5 380,250.5 340,230.5" fill="#fff" stroke="#BFBFBF"/>
+<g class="hx aC"><rect x="200.5" y="290.5" width="79" height="59" rx="8" fill="#fff" stroke="#BFBFBF"/><text x="240" y="324" text-anchor="middle" fill="#6B6B6B">Cancel order</text></g>
+<g class="hx aSh"><rect x="480.5" y="290.5" width="79" height="59" rx="8" fill="#fff" stroke="#BFBFBF"/><text x="520" y="324" text-anchor="middle" fill="#6B6B6B">Ship order</text></g>
+<g class="hx aE"><circle cx="380" cy="430.5" r="10" fill="#fff" stroke="#5B5B5B" stroke-width="1.2"/><circle cx="380" cy="430.5" r="6" fill="#5B5B5B"/></g>
+</svg>
+</div>
+
+<!-- transition veil -->
+<div class="hx veil" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; background: #FFFFFF; pointer-events: none"></div>
+</div>
+
+<!-- cursor -->
+<svg aria-hidden="true" class="hx kCur" width="14" height="20" viewBox="0 0 14 20" style="position: absolute; left: 0; top: 0; z-index: 3"><path d="M1 1 L1 15.5 L4.6 12.2 L7.2 18 L9.6 17 L7.1 11.4 L12 11.4 Z" fill="#000" stroke="#fff" stroke-width="1.2" stroke-linejoin="round"/></svg>
+</div>
+</div>
+
+<!-- scene progress -->
+<div aria-hidden="true" class="scenes" style="width: 100%; max-width: 1136px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: -24px">
+<div style="position: relative; display: flex; flex-direction: column; gap: 10px; padding: 14px 16px; border-radius: 12px; overflow: hidden">
+<span class="hx sc1" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; background: #FFFFFF; box-shadow: 0 0 0 1px #E6E1F0; border-radius: 12px"></span>
+<span style="position: relative; font-size: 14px; font-weight: 600; color: #1A1530">Diagramme de classes</span>
+<span style="position: relative; height: 3px; border-radius: 2px; background: #E6E1F0; overflow: hidden"><span class="hx pg1" style="position: absolute; left: 0; top: 0; bottom: 0; width: 100%; background: #6C4EBE; transform-origin: 0 50%"></span></span>
+</div>
+<div style="position: relative; display: flex; flex-direction: column; gap: 10px; padding: 14px 16px; border-radius: 12px; overflow: hidden">
+<span class="hx sc2" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; background: #FFFFFF; box-shadow: 0 0 0 1px #E6E1F0; border-radius: 12px"></span>
+<span style="position: relative; font-size: 14px; font-weight: 600; color: #1A1530">Diagramme de séquence</span>
+<span style="position: relative; height: 3px; border-radius: 2px; background: #E6E1F0; overflow: hidden"><span class="hx pg2" style="position: absolute; left: 0; top: 0; bottom: 0; width: 100%; background: #6C4EBE; transform-origin: 0 50%"></span></span>
+</div>
+<div style="position: relative; display: flex; flex-direction: column; gap: 10px; padding: 14px 16px; border-radius: 12px; overflow: hidden">
+<span class="hx sc3" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; background: #FFFFFF; box-shadow: 0 0 0 1px #E6E1F0; border-radius: 12px"></span>
+<span style="position: relative; font-size: 14px; font-weight: 600; color: #1A1530">Diagramme d’activité</span>
+<span style="position: relative; height: 3px; border-radius: 2px; background: #E6E1F0; overflow: hidden"><span class="hx pg3" style="position: absolute; left: 0; top: 0; bottom: 0; width: 100%; background: #6C4EBE; transform-origin: 0 50%"></span></span>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- ============ FACT STRIP ============ -->
+<section aria-label="Key facts" style="border-bottom: 1px solid #ECE8F4; background: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 28px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px">
+<div style="display: flex; align-items: center; gap: 14px"><span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 32px; color: #6D28D9">6</span><span style="font-size: 14px; line-height: 1.4; color: #4A4560">types de<br>diagrammes UML</span></div>
+<div style="display: flex; align-items: center; gap: 14px"><span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 32px; color: #6D28D9">0</span><span style="font-size: 14px; line-height: 1.4; color: #4A4560">installation pour<br>la version web</span></div>
+<div style="display: flex; align-items: center; gap: 14px"><span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 32px; color: #6D28D9">3</span><span style="font-size: 14px; line-height: 1.4; color: #4A4560">langues d’interface<br>EN · FR · DE</span></div>
+<div style="display: flex; align-items: center; gap: 14px"><span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 32px; color: #6D28D9">GPL</span><span style="font-size: 14px; line-height: 1.4; color: #4A4560">libre et gratuit,<br>pour toujours</span></div>
+</div>
+</section>
+
+<!-- ============ DIAGRAM GALLERY ============ -->
+<section id="diagrams" style="max-width: 1200px; width: 100%; box-sizing: border-box; margin: 0 auto; padding: 112px 24px 104px; display: flex; flex-direction: column; gap: 56px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 680px">
+<span style="font-size: 13px; font-weight: 700; letter-spacing: .12em; color: #6D28D9">DIAGRAMMES PRIS EN CHARGE</span>
+<h2 class="h2" style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 46px; line-height: 1.08; letter-spacing: -0.03em">Six diagrammes.<br>Une seule façon de travailler.</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #4A4560">Tous les diagrammes fonctionnent de la même façon : une palette, une zone de dessin. Maîtrisez-en un, vous connaissez déjà les cinq autres.</p>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px">
+
+<!-- Class -->
+<article class="card" style="border: 1px solid #E6E1F0; border-radius: 16px; background: #FFFFFF; overflow: hidden; display: flex; flex-direction: column">
+<div class="dots" style="height: 220px; border-bottom: 1px solid #EEEAF5; display: flex; align-items: center; justify-content: center; padding: 12px">
+<svg role="img" aria-label="Animated class diagram: Circle and Square inherit from Shape" viewBox="0 0 320 190" style="width: 100%; height: 100%">
+<g font-family="Inter, sans-serif" font-size="10" fill="#1A1530">
+<g class="a1"><rect x="115" y="12" width="90" height="70" rx="3" fill="#fff" stroke="#1A1530" stroke-width="1.2"/><rect x="115.6" y="12.6" width="88.8" height="23" fill="#EEE8FC"/><text x="160" y="28" text-anchor="middle" font-weight="700" font-style="italic">Shape</text><line x1="115" y1="36" x2="205" y2="36" stroke="#1A1530"/><text x="123" y="51">- x, y : int</text><line x1="115" y1="58" x2="205" y2="58" stroke="#1A1530"/><text x="123" y="73">+ draw()</text></g>
+<g class="a2"><rect x="30" y="112" width="100" height="66" rx="3" fill="#fff" stroke="#1A1530" stroke-width="1.2"/><rect x="30.6" y="112.6" width="98.8" height="23" fill="#EEE8FC"/><text x="80" y="128" text-anchor="middle" font-weight="700">Circle</text><line x1="30" y1="136" x2="130" y2="136" stroke="#1A1530"/><text x="38" y="150">- radius : double</text><line x1="30" y1="157" x2="130" y2="157" stroke="#1A1530"/><text x="38" y="171">+ area()</text></g>
+<g class="a3"><rect x="190" y="112" width="100" height="66" rx="3" fill="#fff" stroke="#1A1530" stroke-width="1.2"/><rect x="190.6" y="112.6" width="98.8" height="23" fill="#EEE8FC"/><text x="240" y="128" text-anchor="middle" font-weight="700">Square</text><line x1="190" y1="136" x2="290" y2="136" stroke="#1A1530"/><text x="198" y="150">- side : double</text><line x1="190" y1="157" x2="290" y2="157" stroke="#1A1530"/><text x="198" y="171">+ area()</text></g>
+<path class="dk d4" pathLength="100" d="M80 112 V100 H160 V92" fill="none" stroke="#1A1530" stroke-width="1.2"/>
+<path class="dk d4" pathLength="100" d="M240 112 V100 H160" fill="none" stroke="#1A1530" stroke-width="1.2"/>
+<polygon class="a5" points="160,82 153,93 167,93" fill="#fff" stroke="#6D28D9" stroke-width="1.6"/>
+</g></svg>
+</div>
+<div style="padding: 24px 24px 26px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600; letter-spacing: -0.01em">Diagramme de classes</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A4560; flex-grow: 1">Classes, interfaces et paquetages, avec héritage, association, composition et dépendances.</p>
+<a href="https://violetumleditor.github.io/product" style="font-size: 14.5px; font-weight: 600; margin-top: 6px">Essayer en ligne →</a>
+</div>
+</article>
+
+<!-- Sequence -->
+<article class="card" style="border: 1px solid #E6E1F0; border-radius: 16px; background: #FFFFFF; overflow: hidden; display: flex; flex-direction: column">
+<div class="dots" style="height: 220px; border-bottom: 1px solid #EEEAF5; display: flex; align-items: center; justify-content: center; padding: 12px">
+<svg role="img" aria-label="Animated sequence diagram: Client, Server and Database exchanging messages" viewBox="0 0 320 190" style="width: 100%; height: 100%">
+<g font-family="Inter, sans-serif" font-size="10" fill="#1A1530">
+<g class="a1"><rect x="20" y="8" width="80" height="24" rx="3" fill="#EEE8FC" stroke="#1A1530" stroke-width="1.2"/><text x="60" y="24" text-anchor="middle" font-weight="600">:Client</text><rect x="120" y="8" width="80" height="24" rx="3" fill="#EEE8FC" stroke="#1A1530" stroke-width="1.2"/><text x="160" y="24" text-anchor="middle" font-weight="600">:Server</text><rect x="220" y="8" width="80" height="24" rx="3" fill="#EEE8FC" stroke="#1A1530" stroke-width="1.2"/><text x="260" y="24" text-anchor="middle" font-weight="600">:Database</text><g stroke="#8A85A0" stroke-dasharray="3 3"><line x1="60" y1="32" x2="60" y2="184"/><line x1="160" y1="32" x2="160" y2="184"/><line x1="260" y1="32" x2="260" y2="184"/></g></g>
+<g class="a2"><rect x="156" y="52" width="8" height="100" fill="#fff" stroke="#1A1530" stroke-width="1.1"/><line x1="60" y1="52" x2="155" y2="52" stroke="#1A1530" stroke-width="1.2"/><polyline points="147,48 155,52 147,56" fill="none" stroke="#1A1530" stroke-width="1.2"/><text x="106" y="46" text-anchor="middle">request()</text></g>
+<g class="a3"><rect x="256" y="78" width="8" height="40" fill="#fff" stroke="#1A1530" stroke-width="1.1"/><line x1="164" y1="78" x2="255" y2="78" stroke="#1A1530" stroke-width="1.2"/><polyline points="247,74 255,78 247,82" fill="none" stroke="#1A1530" stroke-width="1.2"/><text x="210" y="72" text-anchor="middle">query()</text></g>
+<g class="a4"><line x1="256" y1="118" x2="165" y2="118" stroke="#6D28D9" stroke-width="1.2" stroke-dasharray="4 3"/><polyline points="173,114 165,118 173,122" fill="none" stroke="#6D28D9" stroke-width="1.2"/><text x="210" y="112" text-anchor="middle" fill="#6D28D9">rows</text></g>
+<g class="a5"><line x1="156" y1="152" x2="61" y2="152" stroke="#6D28D9" stroke-width="1.2" stroke-dasharray="4 3"/><polyline points="69,148 61,152 69,156" fill="none" stroke="#6D28D9" stroke-width="1.2"/><text x="108" y="146" text-anchor="middle" fill="#6D28D9">response</text></g>
+</g></svg>
+</div>
+<div style="padding: 24px 24px 26px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600; letter-spacing: -0.01em">Diagramme de séquence</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A4560; flex-grow: 1">Lignes de vie, barres d’activation et messages pour montrer comment les objets échangent dans le temps.</p>
+<a href="https://violetumleditor.github.io/product" style="font-size: 14.5px; font-weight: 600; margin-top: 6px">Essayer en ligne →</a>
+</div>
+</article>
+
+<!-- Activity -->
+<article class="card" style="border: 1px solid #E6E1F0; border-radius: 16px; background: #FFFFFF; overflow: hidden; display: flex; flex-direction: column">
+<div class="dots" style="height: 220px; border-bottom: 1px solid #EEEAF5; display: flex; align-items: center; justify-content: center; padding: 12px">
+<svg role="img" aria-label="Animated activity diagram: receive order, decision, ship or cancel" viewBox="0 0 320 190" style="width: 100%; height: 100%">
+<g font-family="Inter, sans-serif" font-size="10" fill="#1A1530">
+<g class="a1"><circle cx="18" cy="95" r="7" fill="#1A1530"/><line x1="25" y1="95" x2="41" y2="95" stroke="#1A1530" stroke-width="1.2"/><polyline points="35,91 41,95 35,99" fill="none" stroke="#1A1530" stroke-width="1.2"/></g>
+<g class="a2"><rect x="42" y="78" width="78" height="34" rx="12" fill="#fff" stroke="#1A1530" stroke-width="1.2"/><text x="81" y="99" text-anchor="middle">Receive order</text><line x1="120" y1="95" x2="140" y2="95" stroke="#1A1530" stroke-width="1.2"/></g>
+<g class="a3"><polygon points="152,83 164,95 152,107 140,95" fill="#EEE8FC" stroke="#1A1530" stroke-width="1.2"/><text x="158" y="66" fill="#6D28D9">[paid]</text><text x="158" y="132" fill="#6D28D9">[refused]</text></g>
+<path class="dk d4" pathLength="100" d="M152 83 V45 H185" fill="none" stroke="#1A1530" stroke-width="1.2"/>
+<path class="dk d4" pathLength="100" d="M152 107 V145 H185" fill="none" stroke="#1A1530" stroke-width="1.2"/>
+<g class="a5"><polyline points="179,41 185,45 179,49" fill="none" stroke="#1A1530" stroke-width="1.2"/><rect x="186" y="28" width="80" height="34" rx="12" fill="#fff" stroke="#1A1530" stroke-width="1.2"/><text x="226" y="49" text-anchor="middle">Ship order</text><polyline points="179,141 185,145 179,149" fill="none" stroke="#1A1530" stroke-width="1.2"/><rect x="186" y="128" width="80" height="34" rx="12" fill="#fff" stroke="#1A1530" stroke-width="1.2"/><text x="226" y="149" text-anchor="middle">Cancel</text></g>
+<path class="dk d6" pathLength="100" d="M266 45 H292 V86" fill="none" stroke="#1A1530" stroke-width="1.2"/>
+<path class="dk d6" pathLength="100" d="M266 145 H292 V104" fill="none" stroke="#1A1530" stroke-width="1.2"/>
+<g class="a6"><circle cx="292" cy="95" r="9" fill="#fff" stroke="#1A1530" stroke-width="1.4"/><circle cx="292" cy="95" r="5" fill="#6D28D9"/></g>
+</g></svg>
+</div>
+<div style="padding: 24px 24px 26px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600; letter-spacing: -0.01em">Diagramme d’activité</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A4560; flex-grow: 1">Actions, décisions, barres de synchronisation et signaux pour décrire un processus, étape par étape.</p>
+<a href="https://violetumleditor.github.io/product" style="font-size: 14.5px; font-weight: 600; margin-top: 6px">Essayer en ligne →</a>
+</div>
+</article>
+
+<!-- State -->
+<article class="card" style="border: 1px solid #E6E1F0; border-radius: 16px; background: #FFFFFF; overflow: hidden; display: flex; flex-direction: column">
+<div class="dots" style="height: 220px; border-bottom: 1px solid #EEEAF5; display: flex; align-items: center; justify-content: center; padding: 12px">
+<svg role="img" aria-label="Animated state diagram: Idle, Running, Paused and Done" viewBox="0 0 320 190" style="width: 100%; height: 100%">
+<g font-family="Inter, sans-serif" font-size="10" fill="#1A1530">
+<g class="a1"><circle cx="55" cy="34" r="6" fill="#1A1530"/><line x1="55" y1="40" x2="55" y2="69" stroke="#1A1530" stroke-width="1.2"/><polyline points="51,63 55,69 59,63" fill="none" stroke="#1A1530" stroke-width="1.2"/>
+<rect x="20" y="70" width="70" height="40" rx="14" fill="#fff" stroke="#1A1530" stroke-width="1.2"/><text x="55" y="94" text-anchor="middle" font-weight="600">Idle</text>
+<rect x="125" y="20" width="80" height="40" rx="14" fill="#fff" stroke="#1A1530" stroke-width="1.2"/><text x="165" y="44" text-anchor="middle" font-weight="600">Running</text>
+<rect x="125" y="120" width="80" height="40" rx="14" fill="#fff" stroke="#1A1530" stroke-width="1.2"/><text x="165" y="144" text-anchor="middle" font-weight="600">Paused</text>
+<rect x="235" y="70" width="70" height="40" rx="14" fill="#fff" stroke="#1A1530" stroke-width="1.2"/><text x="270" y="94" text-anchor="middle" font-weight="600">Done</text></g>
+<rect class="a2" x="20" y="70" width="70" height="40" rx="14" fill="#6D28D9" fill-opacity=".12" stroke="#6D28D9" stroke-width="1.8"/>
+<path class="dk d3" pathLength="100" d="M90 80 Q104 40 124 40" fill="none" stroke="#1A1530" stroke-width="1.2"/>
+<g class="a3"><polyline points="117,36 124,40 117,44" fill="none" stroke="#1A1530" stroke-width="1.2"/><text x="78" y="50">start</text><rect x="125" y="20" width="80" height="40" rx="14" fill="#6D28D9" fill-opacity=".12" stroke="#6D28D9" stroke-width="1.8"/></g>
+<path class="dk d4" pathLength="100" d="M155 60 V119" fill="none" stroke="#1A1530" stroke-width="1.2"/>
+<path class="dk d4" pathLength="100" d="M175 120 V61" fill="none" stroke="#1A1530" stroke-width="1.2"/>
+<g class="a4"><polyline points="151,113 155,119 159,113" fill="none" stroke="#1A1530" stroke-width="1.2"/><polyline points="171,67 175,61 179,67" fill="none" stroke="#1A1530" stroke-width="1.2"/><text x="118" y="93">pause</text><text x="180" y="93">resume</text><rect x="125" y="120" width="80" height="40" rx="14" fill="#6D28D9" fill-opacity=".12" stroke="#6D28D9" stroke-width="1.8"/></g>
+<path class="dk d5" pathLength="100" d="M205 40 Q262 40 270 69" fill="none" stroke="#1A1530" stroke-width="1.2"/>
+<g class="a5"><polyline points="266,63 270,69 274,63" fill="none" stroke="#1A1530" stroke-width="1.2"/><text x="236" y="34">finish</text><rect x="235" y="70" width="70" height="40" rx="14" fill="#6D28D9" fill-opacity=".12" stroke="#6D28D9" stroke-width="1.8"/></g>
+<path class="dk d6" pathLength="100" d="M125 140 Q66 140 55 111" fill="none" stroke="#8A85A0" stroke-width="1.2" stroke-dasharray="100"/>
+<g class="a6"><polyline points="51,117 55,111 59,117" fill="none" stroke="#8A85A0" stroke-width="1.2"/><text x="66" y="155" fill="#5B5671">reset</text></g>
+</g></svg>
+</div>
+<div style="padding: 24px 24px 26px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600; letter-spacing: -0.01em">Diagramme d’états</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A4560; flex-grow: 1">États et transitions pour modéliser tout le cycle de vie d’un objet, du début à la fin.</p>
+<a href="https://violetumleditor.github.io/product" style="font-size: 14.5px; font-weight: 600; margin-top: 6px">Essayer en ligne →</a>
+</div>
+</article>
+
+<!-- Object -->
+<article class="card" style="border: 1px solid #E6E1F0; border-radius: 16px; background: #FFFFFF; overflow: hidden; display: flex; flex-direction: column">
+<div class="dots" style="height: 220px; border-bottom: 1px solid #EEEAF5; display: flex; align-items: center; justify-content: center; padding: 12px">
+<svg role="img" aria-label="Animated object diagram: an order linked to a customer, an order line and a product" viewBox="0 0 320 190" style="width: 100%; height: 100%">
+<g font-family="Inter, sans-serif" font-size="10" fill="#1A1530">
+<g class="a1"><rect x="20" y="18" width="130" height="64" rx="3" fill="#fff" stroke="#1A1530" stroke-width="1.2"/><text x="85" y="35" text-anchor="middle" font-weight="700" text-decoration="underline">order1 : Order</text><line x1="20" y1="43" x2="150" y2="43" stroke="#1A1530"/><text x="28" y="59">id = 42</text><text x="28" y="73">total = 99.90</text></g>
+<path class="dk d2" pathLength="100" d="M150 50 H180" fill="none" stroke="#1A1530" stroke-width="1.2"/>
+<g class="a2"><rect x="180" y="18" width="122" height="64" rx="3" fill="#fff" stroke="#1A1530" stroke-width="1.2"/><text x="241" y="35" text-anchor="middle" font-weight="700" text-decoration="underline">alice : Customer</text><line x1="180" y1="43" x2="302" y2="43" stroke="#1A1530"/><text x="188" y="59">name = "Alice"</text><text x="188" y="73">vip = true</text></g>
+<path class="dk d3" pathLength="100" d="M85 82 V118" fill="none" stroke="#1A1530" stroke-width="1.2"/>
+<g class="a3"><rect x="20" y="118" width="130" height="56" rx="3" fill="#fff" stroke="#1A1530" stroke-width="1.2"/><text x="85" y="135" text-anchor="middle" font-weight="700" text-decoration="underline">line1 : OrderLine</text><line x1="20" y1="143" x2="150" y2="143" stroke="#1A1530"/><text x="28" y="161">quantity = 2</text></g>
+<path class="dk d4" pathLength="100" d="M150 146 H180" fill="none" stroke="#6D28D9" stroke-width="1.4"/>
+<g class="a4"><rect x="180" y="118" width="122" height="56" rx="3" fill="#EEE8FC" stroke="#6D28D9" stroke-width="1.4"/><text x="241" y="135" text-anchor="middle" font-weight="700" text-decoration="underline">book : Product</text><line x1="180" y1="143" x2="302" y2="143" stroke="#6D28D9"/><text x="188" y="161">title = "UML 101"</text></g>
+</g></svg>
+</div>
+<div style="padding: 24px 24px 26px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600; letter-spacing: -0.01em">Diagramme d’objets</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A4560; flex-grow: 1">Des instantanés d’objets concrets, de leurs valeurs et de leurs liens à un moment donné.</p>
+<a href="https://violetumleditor.github.io/product" style="font-size: 14.5px; font-weight: 600; margin-top: 6px">Essayer en ligne →</a>
+</div>
+</article>
+
+<!-- Use case -->
+<article class="card" style="border: 1px solid #E6E1F0; border-radius: 16px; background: #FFFFFF; overflow: hidden; display: flex; flex-direction: column">
+<div class="dots" style="height: 220px; border-bottom: 1px solid #EEEAF5; display: flex; align-items: center; justify-content: center; padding: 12px">
+<svg role="img" aria-label="Animated use case diagram: a customer browses the catalog, places an order and pays" viewBox="0 0 320 190" style="width: 100%; height: 100%">
+<g font-family="Inter, sans-serif" font-size="10" fill="#1A1530">
+<g class="a1"><rect x="112" y="8" width="196" height="174" rx="6" fill="#fff" fill-opacity=".7" stroke="#1A1530" stroke-width="1.2"/><text x="210" y="24" text-anchor="middle" font-weight="700">Online shop</text>
+<g fill="none" stroke="#1A1530" stroke-width="1.4" stroke-linecap="round"><circle cx="48" cy="72" r="9" fill="#EEE8FC"/><line x1="48" y1="81" x2="48" y2="112"/><line x1="32" y1="92" x2="64" y2="92"/><line x1="48" y1="112" x2="36" y2="132"/><line x1="48" y1="112" x2="60" y2="132"/></g><text x="48" y="148" text-anchor="middle" font-weight="600">Customer</text></g>
+<path class="dk d2" pathLength="100" d="M66 94 L150 55" fill="none" stroke="#1A1530" stroke-width="1.2"/>
+<g class="a2"><ellipse cx="212" cy="55" rx="62" ry="17" fill="#fff" stroke="#1A1530" stroke-width="1.2"/><text x="212" y="59" text-anchor="middle">Browse catalog</text></g>
+<path class="dk d3" pathLength="100" d="M66 97 L150 100" fill="none" stroke="#1A1530" stroke-width="1.2"/>
+<g class="a3"><ellipse cx="212" cy="100" rx="62" ry="17" fill="#fff" stroke="#1A1530" stroke-width="1.2"/><text x="212" y="104" text-anchor="middle">Place order</text></g>
+<path class="dk d4" pathLength="100" d="M66 100 L150 145" fill="none" stroke="#1A1530" stroke-width="1.2"/>
+<g class="a4"><ellipse cx="212" cy="145" rx="62" ry="17" fill="#EEE8FC" stroke="#6D28D9" stroke-width="1.4"/><text x="212" y="149" text-anchor="middle">Pay</text></g>
+</g></svg>
+</div>
+<div style="padding: 24px 24px 26px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600; letter-spacing: -0.01em">Diagramme de cas d’utilisation</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A4560; flex-grow: 1">Acteurs, cas d’utilisation et limites du système pour cerner les vrais besoins des utilisateurs.</p>
+<a href="https://violetumleditor.github.io/product" style="font-size: 14.5px; font-weight: 600; margin-top: 6px">Essayer en ligne →</a>
+</div>
+</article>
+
+</div>
+</section>
+
+<!-- ============ SEE IT IN ACTION ============ -->
+<section style="background: #FFFFFF; border-top: 1px solid #ECE8F4; border-bottom: 1px solid #ECE8F4">
+<div class="sec" style="max-width: 1200px; margin: 0 auto; padding: 104px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 64px">
+<div style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<span style="font-size: 13px; font-weight: 700; letter-spacing: .12em; color: #6D28D9">COMMENT ÇA MARCHE</span>
+<h2 class="h2" style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 42px; line-height: 1.08; letter-spacing: -0.03em">Choisir. Poser. Relier.</h2>
+</div>
+<ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 24px">
+<li style="display: flex; gap: 18px"><span style="flex-shrink: 0; width: 40px; height: 40px; border-radius: 10px; background: #EEE8FC; color: #4C1D95; font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 14px; display: flex; align-items: center; justify-content: center">01</span><div style="display: flex; flex-direction: column; gap: 4px"><strong style="font-size: 17px">Choisissez un outil</strong><span style="font-size: 15.5px; line-height: 1.55; color: #4A4560">Prenez un élément dans la palette — ou tapez son nom dans « Search a tool ».</span></div></li>
+<li style="display: flex; gap: 18px"><span style="flex-shrink: 0; width: 40px; height: 40px; border-radius: 10px; background: #EEE8FC; color: #4C1D95; font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 14px; display: flex; align-items: center; justify-content: center">02</span><div style="display: flex; flex-direction: column; gap: 4px"><strong style="font-size: 17px">Posez-le sur la zone de dessin</strong><span style="font-size: 15.5px; line-height: 1.55; color: #4A4560">Cliquez où vous voulez, puis sur le bouton crayon pour saisir son nom, ses attributs et ses méthodes.</span></div></li>
+<li style="display: flex; gap: 18px"><span style="flex-shrink: 0; width: 40px; height: 40px; border-radius: 10px; background: #EEE8FC; color: #4C1D95; font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 14px; display: flex; align-items: center; justify-content: center">03</span><div style="display: flex; flex-direction: column; gap: 4px"><strong style="font-size: 17px">Reliez les éléments</strong><span style="font-size: 15.5px; line-height: 1.55; color: #4A4560">Choisissez une relation et glissez d’un élément à l’autre — Violet trace le lien pour vous.</span></div></li>
+</ol>
+</div>
+<div style="flex: 1 1 560px; min-width: 0">
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 14px">
+<div style="border-radius: 12px; overflow: hidden; background: #F3F2F7; box-shadow: 0 30px 60px -30px rgba(40,20,90,.35), 0 0 0 1px rgba(60,40,120,.12)">
+<video src="/assets/video/violet-demo.mp4" poster="/assets/video/violet-demo-poster.jpg" autoplay muted loop playsinline aria-label="Screen recording of Violet 2.3: creating a class diagram, adding four classes, linking and coloring them" style="display: block; width: 100%; height: auto; aspect-ratio: 16 / 10"></video>
+</div>
+<figcaption style="font-size: 13.5px; color: #5B5671; text-align: center">Enregistrement réel et sans retouche de Violet 2.3 — un diagramme de classes en moins d’une minute.</figcaption>
+</figure>
+</div>
+</div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section id="features" style="background: #15112A; color: #FFFFFF">
+<div class="sec" style="max-width: 1200px; margin: 0 auto; padding: 112px 24px; display: flex; flex-direction: column; gap: 56px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 640px">
+<span style="font-size: 13px; font-weight: 700; letter-spacing: .12em; color: #C4B5FD">POURQUOI VIOLET</span>
+<h2 class="h2" style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 46px; line-height: 1.08; letter-spacing: -0.03em">Conçu pour se faire oublier.</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1px; background: #2B2545; border: 1px solid #2B2545; border-radius: 16px; overflow: hidden">
+<div style="background: #15112A; padding: 32px; display: flex; flex-direction: column; gap: 12px">
+<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C4B5FD" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>
+<h3 style="margin: 0; font-size: 18px; font-weight: 600">Léger et rapide</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #BEB8D3">Une petite application Java pensée pour la simplicité : pas de projet à configurer, pas de cérémonial.</p></div>
+<div style="background: #15112A; padding: 32px; display: flex; flex-direction: column; gap: 12px">
+<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C4B5FD" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+<h3 style="margin: 0; font-size: 18px; font-weight: 600">Directement dans le navigateur</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #BEB8D3">La version en ligne fait tourner la même application. Les nouveaux diagrammes sont enregistrés automatiquement dans le navigateur.</p></div>
+<div style="background: #15112A; padding: 32px; display: flex; flex-direction: column; gap: 12px">
+<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C4B5FD" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 14l-2 2 2 2M15 14l2 2-2 2"/></svg>
+<h3 style="margin: 0; font-size: 18px; font-weight: 600">Des fichiers lisibles</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #BEB8D3">Les diagrammes sont enregistrés en fichiers <span style="font-family: 'JetBrains Mono', monospace; font-size: 13.5px; color: #E9E3FF">*.violet.html</span> — faciles à conserver, partager et archiver.</p></div>
+<div style="background: #15112A; padding: 32px; display: flex; flex-direction: column; gap: 12px">
+<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C4B5FD" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="7"/></svg>
+<h3 style="margin: 0; font-size: 18px; font-weight: 600">Impression et export</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #BEB8D3">Imprimez vos diagrammes, copiez-les dans le presse-papiers ou exportez-les en un clic.</p></div>
+<div style="background: #15112A; padding: 32px; display: flex; flex-direction: column; gap: 12px">
+<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C4B5FD" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h8M8 3v2M6 5c0 4 3 7 6 8M10 5c0 4-3 7-6 8M13 21l4-10 4 10M14.5 17h5"/></svg>
+<h3 style="margin: 0; font-size: 18px; font-weight: 600">Parle votre langue</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #BEB8D3">L’interface est disponible en anglais, en français et en allemand.</p></div>
+<div style="background: #15112A; padding: 32px; display: flex; flex-direction: column; gap: 12px">
+<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C4B5FD" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="8" r="2.5"/><path d="M6 8.5v7M18 10.5c0 4-6 3-11 6"/></svg>
+<h3 style="margin: 0; font-size: 18px; font-weight: 600">Open source</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #BEB8D3">Sous licence GPL et développé ouvertement sur GitHub. Tickets et pull requests bienvenus.</p></div>
+</div>
+</div>
+</section>
+
+<!-- ============ DOWNLOAD ============ -->
+<section id="download" style="border-top: 1px solid #ECE8F4; background: #FFFFFF">
+<div class="sec" style="max-width: 1200px; margin: 0 auto; padding: 104px 24px 112px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 16px; align-items: center; text-align: center">
+<span style="font-size: 13px; font-weight: 700; letter-spacing: .12em; color: #6D28D9">OBTENIR VIOLET</span>
+<h2 class="h2" style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 46px; line-height: 1.08; letter-spacing: -0.03em">Commencez à dessiner en une minute.</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #4A4560; max-width: 560px">Utilisez-le en ligne tout de suite ou installez-le sur votre machine. Même éditeur, mêmes fichiers.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px">
+<div style="border-radius: 16px; padding: 28px; background: #6D28D9; color: #FFFFFF; display: flex; flex-direction: column; gap: 12px">
+<svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600">En ligne</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #EDE5FF; flex-grow: 1">Fonctionne immédiatement dans tout navigateur récent. Rien à installer.</p>
+<a href="https://violetumleditor.github.io/product" style="height: 46px; border-radius: 10px; background: #FFFFFF; color: #4C1D95; font-weight: 600; font-size: 15px; display: flex; align-items: center; justify-content: center">Lancer Violet</a>
+</div>
+<div style="border-radius: 16px; padding: 28px; border: 1px solid #E6E1F0; display: flex; flex-direction: column; gap: 12px">
+<svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6D28D9" stroke-width="1.8" stroke-linejoin="round"><path d="M3 5.5 10.5 4.5v7H3zM12.5 4.2 21 3v8.5h-8.5zM3 12.5h7.5v7L3 18.5zM12.5 12.5H21V21l-8.5-1.2z"/></svg>
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600">Windows</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A4560; flex-grow: 1">Installeur natif <span style="font-family: 'JetBrains Mono', monospace; font-size: 13.5px">.exe</span></p>
+<a href="https://sourceforge.net/projects/violet/" style="height: 46px; border-radius: 10px; border: 1px solid #D9D3EA; color: #1A1530; font-weight: 600; font-size: 15px; display: flex; align-items: center; justify-content: center">Télécharger sur SourceForge</a>
+</div>
+<div style="border-radius: 16px; padding: 28px; border: 1px solid #E6E1F0; display: flex; flex-direction: column; gap: 12px">
+<svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6D28D9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6-6-6M12 19h8"/></svg>
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600">Linux</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A4560; flex-grow: 1">Paquets <span style="font-family: 'JetBrains Mono', monospace; font-size: 13.5px">.deb</span> et <span style="font-family: 'JetBrains Mono', monospace; font-size: 13.5px">.rpm</span></p>
+<a href="https://sourceforge.net/projects/violet/" style="height: 46px; border-radius: 10px; border: 1px solid #D9D3EA; color: #1A1530; font-weight: 600; font-size: 15px; display: flex; align-items: center; justify-content: center">Télécharger sur SourceForge</a>
+</div>
+<div style="border-radius: 16px; padding: 28px; border: 1px solid #E6E1F0; display: flex; flex-direction: column; gap: 12px">
+<svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6D28D9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10h12v5a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5zM17 11h1.5a2.5 2.5 0 0 1 0 5H17M8 3c0 1.5 1.5 1.5 1.5 3S8 7.5 8 7.5M12 3c0 1.5 1.5 1.5 1.5 3S12 7.5 12 7.5"/></svg>
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600">Tout système et Eclipse</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A4560; flex-grow: 1">JAR exécutable pour Java 17+, et un plugin pour l’IDE Eclipse.</p>
+<a href="https://sourceforge.net/projects/violet/" style="height: 46px; border-radius: 10px; border: 1px solid #D9D3EA; color: #1A1530; font-weight: 600; font-size: 15px; display: flex; align-items: center; justify-content: center">Télécharger sur SourceForge</a>
+</div>
+</div>
+<div style="border-radius: 14px; background: #15112A; padding: 20px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<code style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #E9E3FF"><span style="color: #8F86B0">$</span> git clone https://github.com/violetumleditor/product.git &amp;&amp; mvn clean package</code>
+<a href="https://github.com/violetumleditor/product" style="color: #C4B5FD; font-weight: 600; font-size: 14.5px">Compiler depuis les sources →</a>
+</div>
+</div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+</main>
+<footer style="background: #0F0C1F; color: #BEB8D3">
+<div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px 40px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-wrap: wrap; gap: 48px">
+<div style="flex: 2 1 280px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: center; gap: 10px"><img src="/assets/img/logo.png" alt="" style="width: 30px; height: 30px; border-radius: 8px"><span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 19px; color: #FFFFFF">Violet UML Editor</span></div>
+<p style="margin: 0; font-size: 14.5px; line-height: 1.6; max-width: 320px">Un éditeur UML libre, gratuit et léger, pour les étudiants, les enseignants et les développeurs.</p>
+</div>
+<nav aria-label="Product" style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 10px; font-size: 14.5px"><strong style="color: #FFFFFF; font-size: 13px; letter-spacing: .08em">PRODUIT</strong><a href="#diagrams" style="color: #BEB8D3">Diagrammes</a><a href="#features" style="color: #BEB8D3">Fonctionnalités</a><a href="#download" style="color: #BEB8D3">Télécharger</a><a href="https://violetumleditor.github.io/product" style="color: #BEB8D3">Lancer en ligne</a></nav>
+<nav aria-label="Documentation" style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 10px; font-size: 14.5px"><strong style="color: #FFFFFF; font-size: 13px; letter-spacing: .08em">DOCUMENTATION</strong><a href="/fr/docs/" style="color: #BEB8D3">Guide utilisateur</a><a href="/fr/docs/" style="color: #BEB8D3">Prise en main</a><a href="/fr/docs/" style="color: #BEB8D3">Fichiers et stockage</a><a href="https://github.com/violetumleditor/product#how-to-compile-violets-source-code" style="color: #BEB8D3">Guide du développeur</a></nav>
+<nav aria-label="Community" style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 10px; font-size: 14.5px"><strong style="color: #FFFFFF; font-size: 13px; letter-spacing: .08em">COMMUNAUTÉ</strong><a href="https://github.com/violetumleditor/product" style="color: #BEB8D3">GitHub — code source</a><a href="https://github.com/violetumleditor/violetumleditor.github.io" style="color: #BEB8D3">GitHub — site web</a><a href="https://sourceforge.net/projects/violet/" style="color: #BEB8D3">SourceForge</a><a href="http://alexdp.free.fr/violet" style="color: #BEB8D3">Site historique</a></nav>
+</div>
+<div style="border-top: 1px solid #2B2545; padding-top: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13.5px; color: #8F86B0">
+<span>© Contributeurs de Violet UML Editor · Publié sous licence GNU GPL</span>
+<span>Hébergé sur GitHub Pages</span>
+</div>
+</div>
+</footer>
+</div>
+</body>
+</html>

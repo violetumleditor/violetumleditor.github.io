@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diagramme de classes — Documentation Violet</title>
+<meta name="description" content="Classes, interfaces, packages et leurs relations.">
+<link rel="canonical" href="https://violetumleditor.github.io/fr/docs/class-diagram.html">
+<link rel="alternate" hreflang="en" href="https://violetumleditor.github.io/docs/class-diagram.html">
+<link rel="alternate" hreflang="fr" href="https://violetumleditor.github.io/fr/docs/class-diagram.html">
+<link rel="alternate" hreflang="x-default" href="https://violetumleditor.github.io/docs/class-diagram.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Diagramme de classes — Documentation Violet">
+<meta property="og:description" content="Classes, interfaces, packages et leurs relations.">
+<meta property="og:url" content="https://violetumleditor.github.io/fr/docs/class-diagram.html">
+<meta property="og:image" content="https://violetumleditor.github.io/assets/img/og-image.png">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#6C4EBE">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Roboto:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/docs.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7451706255072226" crossorigin="anonymous"></script>
+<script defer src="/assets/js/site.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<div class="page">
+<!-- ============ NAV ============ -->
+<header style="position: relative; z-index: 5; border-bottom: 1px solid #ECE8F4; background: #FBFAFD">
+<nav aria-label="Navigation principale" style="max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 72px; display: flex; align-items: center; gap: 32px">
+<a href="/fr/" style="display: flex; align-items: center; gap: 10px; color: #1A1530; flex-shrink: 0">
+<img src="/assets/img/logo.png" alt="" style="width: 34px; height: 34px; border-radius: 9px">
+<span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.02em">Violet</span>
+<span class="wm2" style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 20px; color: #6B6680; letter-spacing: -0.02em">UML Editor</span>
+</a>
+<div class="nl" style="display: flex; align-items: center; gap: 26px; font-size: 15px; font-weight: 500; flex-grow: 1">
+<a class="navlink" href="/fr/#diagrams">Diagrammes</a>
+<a class="navlink" href="/fr/#features">Fonctionnalités</a>
+<a class="navlink" href="/fr/docs/" aria-current="page" style="color:#6C4EBE;font-weight:600">Documentation</a>
+<a class="navlink" href="https://github.com/violetumleditor/product" style="display: flex; align-items: center; gap: 6px">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+GitHub</a>
+</div>
+<span class="sp" style="flex-grow: 1; display: none"></span>
+<div style="display: flex; align-items: center; gap: 10px">
+<div role="group" aria-label="Langue" style="display: flex; padding: 3px; border-radius: 10px; background: #EFEBF8">
+<a href="/docs/class-diagram.html" hreflang="en" lang="en" style="height: 32px; min-width: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 7px; font: 600 13px Inter, sans-serif; background: transparent; color: #5B5671; box-shadow: none">EN</a><a href="#" hreflang="fr" lang="fr" aria-current="true" style="height: 32px; min-width: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 7px; font: 600 13px Inter, sans-serif; background: #FFFFFF; color: #1A1530; box-shadow: 0 1px 2px rgba(40,20,90,.18)">FR</a>
+</div>
+<a class="cta2" href="https://violetumleditor.github.io/product" style="height: 44px; padding: 0 16px; display: inline-flex; align-items: center; border-radius: 10px; border: 1px solid #D9D3EA; color: #1A1530; font-weight: 600; font-size: 15px; background: #FFFFFF; white-space: nowrap">Lancer en ligne</a>
+<a class="cta1" href="https://sourceforge.net/projects/violet/" style="height: 44px; padding: 0 16px; display: inline-flex; align-items: center; gap: 8px; border-radius: 10px; background: #1A1530; color: #FFFFFF; font-weight: 600; font-size: 15px; white-space: nowrap">
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+Télécharger</a>
+<button type="button" class="burger" id="burger" aria-controls="mmenu" aria-expanded="false" aria-label="Ouvrir le menu" style="display: none; width: 44px; height: 44px; border: 1px solid #D9D3EA; border-radius: 10px; background: #FFFFFF; align-items: center; justify-content: center; cursor: pointer; color: #1A1530">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+</button>
+</div>
+</nav>
+<div id="mmenu" hidden class="mmenu" style="position: absolute; left: 0; right: 0; top: 72px; background: #FFFFFF; border-bottom: 1px solid #ECE8F4; box-shadow: 0 24px 40px -24px rgba(40,20,90,.3); padding: 12px 24px 24px; display: flex; flex-direction: column; gap: 4px; font-size: 17px; font-weight: 500">
+<a class="navlink" href="/fr/#diagrams" style="padding: 12px 0; border-bottom: 1px solid #F0EDF6">Diagrammes</a>
+<a class="navlink" href="/fr/#features" style="padding: 12px 0; border-bottom: 1px solid #F0EDF6">Fonctionnalités</a>
+<a class="navlink" href="/fr/docs/" style="padding: 12px 0; border-bottom: 1px solid #F0EDF6">Documentation</a>
+<a class="navlink" href="https://github.com/violetumleditor/product" style="padding: 12px 0; border-bottom: 1px solid #F0EDF6">GitHub — code source</a>
+<a class="navlink" href="https://github.com/violetumleditor/violetumleditor.github.io" style="padding: 12px 0; border-bottom: 1px solid #F0EDF6">GitHub — site web</a>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 14px">
+<a href="https://violetumleditor.github.io/product" style="height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 10px; border: 1px solid #D9D3EA; color: #1A1530; font-weight: 600; font-size: 15px">Lancer en ligne</a>
+<a href="https://sourceforge.net/projects/violet/" style="height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 10px; background: #1A1530; color: #FFFFFF; font-weight: 600; font-size: 15px">Télécharger</a>
+</div>
+</div>
+</header>
+
+<!-- ============ AD BAND (option A, recommended) ============ -->
+<aside class="adband" aria-label="Publicité" style="background: #F6F3FC; border-bottom: 1px solid #ECE8F4">
+<div style="max-width: 1200px; margin: 0 auto; padding: 12px 24px 14px; display: flex; flex-direction: column; align-items: center; gap: 6px">
+<div style="width: 100%; max-width: 728px; display: flex; justify-content: space-between; gap: 12px; font-size: 11px; color: #6B6680">
+<span style="font-weight: 600; letter-spacing: .12em">PUBLICITÉ</span>
+<span class="adnote">La publicité aide Violet à rester libre et gratuit.</span>
+</div>
+<div class="adw"><ins class="adsbygoogle vads" style="display:inline-block" data-ad-client="ca-pub-7451706255072226" data-ad-slot="3093485580"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+</div>
+</aside>
+
+
+<div class="docs-wrap">
+<button type="button" class="docbtn" id="docbtn" aria-controls="dside" aria-expanded="false"><span>Menu de la documentation — Diagramme de classes</span>
+<svg aria-hidden="true" width="14" height="14" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></button>
+<div class="docs">
+<nav class="dside" id="dside" aria-label="Menu de la documentation"><div class="sgroup"><p class="sgtitle">Prise en main</p><ul><li><a href="/fr/docs/index.html">Introduction</a></li><li><a href="/fr/docs/online.html">Utiliser Violet en ligne</a></li><li><a href="/fr/docs/install.html">Installer sur votre ordinateur</a></li></ul></div><div class="sgroup"><p class="sgtitle">Utiliser Violet</p><ul><li><a href="/fr/docs/interface.html">L’interface</a></li><li><a href="/fr/docs/elements.html">Ajouter des éléments</a></li><li><a href="/fr/docs/links.html">Relier des éléments</a></li><li><a href="/fr/docs/properties.html">Modifier les propriétés</a></li><li><a href="/fr/docs/files.html">Fichiers et stockage</a></li><li><a href="/fr/docs/print-export.html">Impression et export</a></li></ul></div><div class="sgroup"><p class="sgtitle">Diagrammes</p><ul><li><a href="/fr/docs/class-diagram.html" aria-current="page">Diagramme de classes</a></li><li><a href="/fr/docs/sequence-diagram.html">Diagramme de séquence</a></li><li><a href="/fr/docs/activity-diagram.html">Diagramme d’activité</a></li><li><a href="/fr/docs/state-diagram.html">Diagramme d’états</a></li><li><a href="/fr/docs/object-diagram.html">Diagramme d’objets</a></li><li><a href="/fr/docs/use-case-diagram.html">Diagramme de cas d’utilisation</a></li></ul></div><div class="sgroup"><p class="sgtitle">Aide</p><ul><li><a href="/fr/docs/shortcuts.html">Raccourcis clavier</a></li><li><a href="/fr/docs/faq.html">FAQ</a></li></ul></div></nav>
+<main id="main" class="dmain">
+<article class="article">
+<p class="crumb"><a href="/fr/docs/">Documentation</a> <span aria-hidden="true">/</span> Diagrammes</p>
+<h1>Diagramme de classes</h1>
+<p class="lead">Classes, interfaces, packages et leurs relations.</p>
+
+<p>Créez-en un avec <em>Fichier › Nouveau › Diagramme UML › Vue statique › Diagramme de classes</em>. Les fichiers portent l’extension <code>.class.violet.html</code>.</p>
+<figure class="shot"><img src="/assets/img/docs/class-diagram-detail.png" alt="Un diagramme de classes : Customer, Order, OrderLine et Product" width="600" height="440" loading="lazy"></figure>
+<p>Le bouton crayon d’une classe ouvre trois champs : <em>Nom</em>, <em>Attributs</em> et <em>Méthodes</em>, un par ligne. Taper sur une classe sélectionnée ne change que son nom.</p>
+<div class="callout callout-tip"><strong>Astuce</strong> Pour l’agrégation et la composition, glissez de la partie vers le tout : le losange se dessine sur l’élément où vous relâchez.</div>
+<h2 id="tools">Les outils</h2>
+<figure class="shot"><img src="/assets/img/docs/palette-class.png" alt="Les outils du diagramme de classes" width="280" height="260" loading="lazy"></figure>
+<table><thead><tr><th>Outil</th><th>Pour</th></tr></thead><tbody><tr><td><em>Classe</em></td><td>une classe, avec un nom, des attributs et des méthodes</td></tr><tr><td><em>Interface</em></td><td>une interface</td></tr><tr><td><em>Package</em></td><td>un package pouvant contenir d’autres éléments</td></tr><tr><td><em>Dépend de</em></td><td>une dépendance (flèche en pointillés)</td></tr><tr><td><em>Hérite de</em></td><td>l’héritage (triangle vide)</td></tr><tr><td><em>Implémente l’interface</em></td><td>la réalisation d’une interface (pointillés, triangle vide)</td></tr><tr><td><em>Est associé à</em></td><td>une association</td></tr><tr><td><em>Est un agrégat de</em></td><td>l’agrégation (losange vide côté tout)</td></tr><tr><td><em>Est composé de</em></td><td>la composition (losange plein côté tout)</td></tr></tbody></table>
+
+<nav class="pager" aria-label="Précédent / Suivant"><a class="pn prev" href="/fr/docs/print-export.html"><span>← Précédent</span><strong>Impression et export</strong></a><a class="pn next" href="/fr/docs/sequence-diagram.html"><span>Suivant →</span><strong>Diagramme de séquence</strong></a></nav>
+<p class="editgh"><a href="https://github.com/violetumleditor/violetumleditor.github.io/edit/master/fr/docs/class-diagram.html">Modifier cette page sur GitHub</a></p>
+</article>
+<nav class="toc" aria-label="Sur cette page"><p class="sgtitle">Sur cette page</p><ul><li><a href="#tools">Les outils</a></li></ul></nav>
+</main>
+</div>
+</div>
+<!-- ============ FOOTER ============ -->
+<footer style="background: #0F0C1F; color: #BEB8D3">
+<div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px 40px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-wrap: wrap; gap: 48px">
+<div style="flex: 2 1 280px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: center; gap: 10px"><img src="/assets/img/logo.png" alt="" style="width: 30px; height: 30px; border-radius: 8px"><span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 19px; color: #FFFFFF">Violet UML Editor</span></div>
+<p style="margin: 0; font-size: 14.5px; line-height: 1.6; max-width: 320px">Un éditeur UML libre, gratuit et léger, pour les étudiants, les enseignants et les développeurs.</p>
+</div>
+<nav aria-label="Product" style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 10px; font-size: 14.5px"><strong style="color: #FFFFFF; font-size: 13px; letter-spacing: .08em">PRODUIT</strong><a href="/fr/#diagrams" style="color: #BEB8D3">Diagrammes</a><a href="/fr/#features" style="color: #BEB8D3">Fonctionnalités</a><a href="/fr/#download" style="color: #BEB8D3">Télécharger</a><a href="https://violetumleditor.github.io/product" style="color: #BEB8D3">Lancer en ligne</a></nav>
+<nav aria-label="Documentation" style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 10px; font-size: 14.5px"><strong style="color: #FFFFFF; font-size: 13px; letter-spacing: .08em">DOCUMENTATION</strong><a href="/fr/docs/" style="color: #BEB8D3">Guide utilisateur</a><a href="/fr/docs/" style="color: #BEB8D3">Prise en main</a><a href="/fr/docs/" style="color: #BEB8D3">Fichiers et stockage</a><a href="https://github.com/violetumleditor/product#how-to-compile-violets-source-code" style="color: #BEB8D3">Guide du développeur</a></nav>
+<nav aria-label="Community" style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 10px; font-size: 14.5px"><strong style="color: #FFFFFF; font-size: 13px; letter-spacing: .08em">COMMUNAUTÉ</strong><a href="https://github.com/violetumleditor/product" style="color: #BEB8D3">GitHub — code source</a><a href="https://github.com/violetumleditor/violetumleditor.github.io" style="color: #BEB8D3">GitHub — site web</a><a href="https://sourceforge.net/projects/violet/" style="color: #BEB8D3">SourceForge</a><a href="http://alexdp.free.fr/violet" style="color: #BEB8D3">Site historique</a></nav>
+</div>
+<div style="border-top: 1px solid #2B2545; padding-top: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13.5px; color: #8F86B0">
+<span>© Contributeurs de Violet UML Editor · Publié sous licence GNU GPL</span>
+<span>Hébergé sur GitHub Pages</span>
+</div>
+</div>
+</footer>
+</div>
+</body>
+</html>
