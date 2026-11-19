@@ -34,9 +34,9 @@
 <!-- ============ NAV ============ -->
 <header style="position: relative; z-index: 5; border-bottom: 1px solid #ECE8F4; background: #FBFAFD">
 <nav aria-label="Navigation principale" style="max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 72px; display: flex; align-items: center; gap: 32px">
-<a href="/fr/" style="display: flex; align-items: center; gap: 10px; color: #1A1530; flex-shrink: 0">
+<a href="/fr/" class="brandlink" style="display: flex; align-items: center; gap: 10px; color: #1A1530; flex-shrink: 0">
 <svg aria-hidden="true" width="34" height="34" viewBox="0 0 24 24" style="flex-shrink: 0; display: block"><rect width="24" height="24" rx="5.6" fill="#6C4EBE"/><g fill="#FFFFFF" transform="translate(12 12.3) scale(.6)"><path transform="rotate(-84)" d="M2.2 0C5.050 -3.410 9.690 -4.185 11.4 0C9.690 4.185 5.050 3.410 2.2 0Z"/><path transform="rotate(-8)" d="M2.2 0C5.000 -3.080 9.520 -3.780 11.2 0C9.520 3.780 5.000 3.080 2.2 0Z"/><path transform="rotate(58)" d="M2.2 0C4.450 -2.970 7.650 -3.645 9.0 0C7.650 3.645 4.450 2.970 2.2 0Z"/><path transform="rotate(124)" d="M2.2 0C4.450 -2.970 7.650 -3.645 9.0 0C7.650 3.645 4.450 2.970 2.2 0Z"/><path transform="rotate(188)" d="M2.2 0C5.000 -3.080 9.520 -3.780 11.2 0C9.520 3.780 5.000 3.080 2.2 0Z"/></g></svg>
-<span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.02em">Violet</span>
+<span class="brand" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.02em; white-space: nowrap">Violet <span style="font-weight: 500">UML Editor</span></span>
 </a>
 <div class="nl" style="display: flex; align-items: center; gap: 26px; font-size: 15px; font-weight: 500; flex-grow: 1">
 <a class="navlink" href="/fr/#diagrams">Diagrammes</a>
@@ -99,11 +99,10 @@ Télécharger</a>
 <p>Tous les paquets pour ordinateur sont publiés sur <a href="https://sourceforge.net/projects/violet/">SourceForge</a>.</p>
 <table><thead><tr><th>Système</th><th>Paquet</th></tr></thead><tbody>
 <tr><td>Windows</td><td>Installeur <code>.exe</code></td></tr>
-<tr><td>macOS</td><td>Application pour macOS</td></tr>
 <tr><td>Linux (Debian, Ubuntu…)</td><td>Paquet <code>.deb</code></td></tr>
-<tr><td>Tout autre système avec Java 17+</td><td>Fichier <code>.jar</code> exécutable</td></tr>
+<tr><td>macOS, et tout système avec Java 17+</td><td>Fichier <code>.jar</code> universel</td></tr>
 </tbody></table>
-<h2 id="jar">Lancer le fichier JAR</h2>
+<h2 id="jar">Lancer le JAR universel (macOS et autres)</h2>
 <p>Installez un environnement Java, version 17 ou plus, puis double-cliquez sur le fichier ou lancez :</p>
 <pre><code>java -jar violetumleditor-&lt;version&gt;.jar</code></pre>
 <h2 id="source">Compiler depuis les sources</h2>
@@ -116,7 +115,7 @@ mvn clean package</code></pre>
 <nav class="pager" aria-label="Précédent / Suivant"><a class="pn prev" href="/fr/docs/online.html"><span>← Précédent</span><strong>Utiliser Violet en ligne</strong></a><a class="pn next" href="/fr/docs/interface.html"><span>Suivant →</span><strong>L’interface</strong></a></nav>
 <p class="editgh"><a href="https://github.com/violetumleditor/violetumleditor.github.io/edit/master/fr/docs/install.html">Modifier cette page sur GitHub</a></p>
 </article>
-<nav class="toc" aria-label="Sur cette page"><p class="sgtitle">Sur cette page</p><ul><li><a href="#jar">Lancer le fichier JAR</a></li><li><a href="#source">Compiler depuis les sources</a></li></ul></nav>
+<nav class="toc" aria-label="Sur cette page"><p class="sgtitle">Sur cette page</p><ul><li><a href="#jar">Lancer le JAR universel (macOS et autres)</a></li><li><a href="#source">Compiler depuis les sources</a></li></ul></nav>
 </main>
 </div>
 </div>

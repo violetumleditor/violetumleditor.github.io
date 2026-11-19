@@ -7,7 +7,7 @@ a{color:#6C4EBE;text-decoration:none}a:hover{color:#4C1D95}
 .card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -18px rgba(45,20,100,.28)}
 @media (max-width:1040px){.nl{display:none!important}.sp{display:block!important}.burger{display:inline-flex!important}}
 @media (max-width:720px){.cta2{display:none!important}.scenes{gap:8px!important;margin-top:-28px!important}.scenes>div{padding:10px 10px!important}.scenes>div>span{font-size:12px!important}}
-@media (max-width:560px){.cta1{display:none!important}.wm2{display:none!important}.h1{font-size:42px!important}.h2{font-size:32px!important}.lead{font-size:17px!important}.sec{padding-top:64px!important;padding-bottom:64px!important}.hero{padding-top:44px!important;padding-bottom:56px!important;gap:40px!important}.adw{height:100px!important;max-width:320px!important}.adnote{display:none!important}}
+@media (max-width:560px){.cta1{display:none!important}.brand{font-size:17px!important}.brandlink{gap:8px!important}.brandlink svg{width:28px!important;height:28px!important}nav{gap:12px!important}.h1{font-size:42px!important}.h2{font-size:32px!important}.lead{font-size:17px!important}.sec{padding-top:64px!important;padding-bottom:64px!important}.hero{padding-top:44px!important;padding-bottom:56px!important;gap:40px!important}.adw{height:100px!important;max-width:320px!important}.adnote{display:none!important}}
 @media (prefers-reduced-motion:reduce){.a1,.a2,.a3,.a4,.a5,.a6,.d2,.d3,.d4,.d5,.d6{animation:none;opacity:1;stroke-dashoffset:0}}
 .a1,.a2,.a3,.a4,.a5,.a6{transform-box:fill-box;transform-origin:center}
 .a1{animation:a1 8s infinite both}.a2{animation:a2 8s infinite both}.a3{animation:a3 8s infinite both}
